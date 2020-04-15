@@ -3,7 +3,6 @@ import React from 'react'
 
 import ComponentRefactor from './ComponentRefactor'
 
-import About from './About'
 import HowItWorks from './HowItWorks'
 
 export default function App() {

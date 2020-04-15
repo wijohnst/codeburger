@@ -8,10 +8,13 @@ export default function HowItWorks() {
   
  const mainWrapperVariants={
     start:{
-      width: 0,
-      height: 0
+      opacity: 0,
+      width: -10,
+      height: -10,
     },
     end:{
+      opacity: 1,
+      scale: 1,
       width: '75%',
       height: '100vh',
       transition:{
@@ -28,11 +31,12 @@ export default function HowItWorks() {
     box-shadow: 5px 5px 12px #707070;
     margin: 0 auto;
     background-color: white;
-    height: 100%;
+    height: 90%;
     overflow: scroll;
   `
   const ContentWrapper = styled(motion.div)`
     opacity: 0;
+    margin: 0 auto;
   `
   return (
     <HowItWorksWrapper
