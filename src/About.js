@@ -11,7 +11,7 @@ import HowItWorks from './HowItWorks'
 
 export default function About() {
 
-  const [pageCount, setPageCount] = useState(3);
+  const [pageCount, setPageCount] = useState(0);
   
   const advancePage = () =>{
     setPageCount(pageCount + 1);
