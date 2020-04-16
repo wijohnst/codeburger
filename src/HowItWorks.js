@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 import HowItWorksContent from './HowItWorksContent'
 
-export default function HowItWorks() {
+export default function HowItWorks({advancePage}) {
   
  const mainWrapperVariants={
     start:{
@@ -48,7 +48,7 @@ export default function HowItWorks() {
         animate={{opacity: 1}}
         transition={{delay: 2, duration: 1, ease:'easeIn'}}
       >
-        <HowItWorksContent />
+        <HowItWorksContent advancePage={advancePage}/>
       </ContentWrapper>
     </HowItWorksWrapper>
   )

@@ -62,26 +62,8 @@ return (
   <PageWrapper animate={{opacity: 1}} transition={{ease: "easeIn", duration: 3}}>
     <TopBun/>
     <Lettuce />
-    <Tomato 
-      animate={{opacity: 1}}
-      transition={{
-        delay: 5,
-        duration: 2,
-        ease: "easeInOut",
-        yoyo: Infinity,
-        repeatDelay: 2
-      }}
-    />
-    <Cheese 
-        animate={{opacity: 1}}
-        transition={{
-          delay: 6,
-          duration: 2,
-          ease: "easeInOut",
-          yoyo: Infinity,
-          repeatDelay: 2
-        }}
-    />
+    <Tomato />
+    <Cheese />
     <Burger />
     <BottomBun />
   </PageWrapper>

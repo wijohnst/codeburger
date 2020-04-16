@@ -8,6 +8,7 @@ import AdvancePageButton from './AdvancePageButton'
 import WillProfile from './WillProfile'
 import WillProfile2 from './WillProfile2'
 import HowItWorks from './HowItWorks'
+import CurriculumOverview from './CurriculumOverview'
 
 export default function About() {
 
@@ -37,7 +38,6 @@ export default function About() {
           <p>Taught by a restaurant person.</p> 
             <AdvancePageButton advancePage={advancePage} />
           </AboutReveal1>
-          
         </AboutWrapper>
       )
     case 1:
@@ -59,9 +59,17 @@ export default function About() {
     case 3:
       return(
         <AboutWrapper>
-          <HowItWorks />
+          <HowItWorks advancePage={advancePage}/>
         </AboutWrapper>
       )
+      case 4:
+        return(
+          <AboutWrapper>
+            <AboutReveal1 animate={{opacity: 1}} transition={{delay: 1, duration: 1, ease:'easeIn'}}>
+              <CurriculumOverview />
+            </AboutReveal1>
+          </AboutWrapper>
+        )
     default:
       return(
         <AboutWrapper>

@@ -7,8 +7,9 @@ import Image from './Image'
 import TransitionChef from './transition_chef.png'
 import Entrepreneur from './entrepreneur.png'
 import BurgerLogo from './BurgerLogo'
+import AdvancePageButton from './AdvancePageButton'
 
-export default function HowItWorksContent() {
+export default function HowItWorksContent({advancePage}) {
   
   const ContentWrapper = styled.div`
     text-align: center;
@@ -29,7 +30,6 @@ export default function HowItWorksContent() {
   `
   const InfoWrapper = styled.div`
     background-color: lightgray;
-    /* border-radius: 5px 0px 0px 5px; */
     padding: 5px;
     min-height: 200px;
   `
@@ -87,6 +87,7 @@ export default function HowItWorksContent() {
       <CurriculumText style={{backgroundColor: '#BC2423'}}>Based on the real-world needs of resturants, bars, and hospitality businesses</CurriculumText>
     </ContentWrapper2>
     <p style={{textAlign:'center'}}> So no matter why you're here, or where you want to go, CodeBurger is the right place to start.</p>
+    <AdvancePageButton advancePage={advancePage}/>
     </React.Fragment>
   )
 }

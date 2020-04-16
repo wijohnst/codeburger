@@ -3,7 +3,7 @@ import React from 'react'
 
 import ComponentRefactor from './ComponentRefactor'
 
-import HowItWorks from './HowItWorks'
+import CurriculumOverview from './CurriculumOverview'
 
 export default function App() {
   
@@ -11,7 +11,7 @@ export default function App() {
   
   if(testControl === 'test'){
     return (
-      <HowItWorks />
+      <CurriculumOverview />
     )
   }else{
     return(
