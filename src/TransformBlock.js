@@ -2,9 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-export default function Block(props) {
+export default function TransformBlock(props) {
   
   const {color, text, shape, delay} = props; 
+
+  let variants;
 
   const ShadowFilter = styled.div`
     filter: drop-shadow((5px 5px 12px #707070));
@@ -31,21 +33,47 @@ export default function Block(props) {
    }
   };
   `
-  const variants={
-    start:{
-      y: -800,
-    },
-    end:{
-      y: 0,
-      transition:{
-        type: 'spring',
-        delay: `${delay}`,
-        duration: 1,
-        stiffness: 50,
-        ease: 'easeInOut'
+ 
+  switch (shape) {
+    case 'triangle':
+      variants ={
+        start:{
+          
+        },
+        end:{
+          clipPath: 'none',
+          x: '100%',
+          y: '100%'
+        }
       }
-    }
+      break;
+      case 'square':
+        variants ={
+          start:{
+            
+          },
+          end:{
+            clipPath: 'none',
+            x: '-100%',
+            y: '-100%'
+          }
+        }
+        break;
+        case 'circle':
+          variants ={
+            start:{
+              
+            },
+            end:{
+              clipPath: 'none'
+            }
+          }
+          break;
+  
+    default:
+      break;
   }
+
   const TextWrapper = styled.div`
     position: relative;
     top: 45%;
@@ -56,6 +84,7 @@ export default function Block(props) {
           variants={variants}
           initial={'start'}
           animate={['start','end']}
+          transition={{delay: 1, duration: 1, ease:'easeIn'}}
         >
           <TextWrapper>
             <b>{text}</b>

@@ -10,9 +10,9 @@ export default function FallingBlocks() {
   `
   return (
     <BlocksWrapper>
-      <Block color={'#23BC6A'} shadow={'full'} text={'HTML'} shape={'triangle'} delay={5} />
-      <Block color={'#BC2423'} shadow={'half'} text={'CSS'} shape={'circle'}  delay={4}/>
-      <Block color={'#FCEE21'} shadow={'half'} text={'JavaScript'}  shape={'square'} delay={3} />
+      <Block color={'#23BC6A'}  text={'HTML'} shape={'triangle'} delay={5} />
+      <Block color={'#BC2423'}  text={'CSS'} shape={'circle'}  delay={4}/>
+      <Block color={'#FCEE21'}  text={'JavaScript'}  shape={'square'} delay={3} />
     </BlocksWrapper>
   )
 }

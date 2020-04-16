@@ -2,9 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-export default function Block(props) {
+export default function MorphBlock(props) {
   
   const {color, text, shape, delay} = props; 
+
+  let variants;
 
   const ShadowFilter = styled.div`
     filter: drop-shadow((5px 5px 12px #707070));
@@ -15,37 +17,48 @@ export default function Block(props) {
     text-align: center;
     background-color: ${color};
     border-radius: 5px 5px 5px;
-    clip-path: ${() =>{
-    switch (shape) {
-      case 'triangle':
-        return(
-          'polygon(50% 0%, 0% 100%, 100% 100%)'
-        )
-      case 'circle':
-        return(
-          'circle(50% at 50% 50%)'
-        )
-      default:
-        break;
-    }
-   }
-  };
   `
-  const variants={
-    start:{
-      y: -800,
-    },
-    end:{
-      y: 0,
-      transition:{
-        type: 'spring',
-        delay: `${delay}`,
-        duration: 1,
-        stiffness: 50,
-        ease: 'easeInOut'
+ 
+  switch (shape) {
+    case 'triangle':
+      variants ={
+        start:{
+          x: '100%',
+          y: '100%'
+        },
+        end:{
+         x: '50%',
+         opacity: 0
+        }
       }
-    }
+      break;
+      case 'square':
+        variants ={
+          start:{
+            x: '-100%',
+            y: '-100%'
+          },
+          end:{
+            x: '-50%',
+            opacity: 0
+          }
+        }
+        break;
+        case 'circle':
+          variants ={
+            start:{
+              
+            },
+            end:{
+              color: `${color}`
+            }
+          }
+          break;
+  
+    default:
+      break;
   }
+
   const TextWrapper = styled.div`
     position: relative;
     top: 45%;
@@ -56,6 +69,7 @@ export default function Block(props) {
           variants={variants}
           initial={'start'}
           animate={['start','end']}
+          transition={{delay: 1, duration: 1, ease:'easeIn'}}
         >
           <TextWrapper>
             <b>{text}</b>

@@ -4,6 +4,8 @@ import { motion } from 'framer-motion'
 
 import CurriculumOverviewScene1 from './CurriculumOverviewScene1'
 import CurriculumOverviewScene2 from './CurriculumOverviewScene2'
+import CurriculumOverviewScene3 from './CurriculumOverviewScene3'
+import CurriculumOverviewScene4 from './CurriculumOverviewScene4'
 
 export default function CurriculumOverview() {
   
@@ -25,6 +27,14 @@ export default function CurriculumOverview() {
       case 1:
         return(
           <CurriculumOverviewScene2 />
+        )
+      case 2:
+        return(
+          <CurriculumOverviewScene3 />
+        )
+      case 3:
+        return(
+          <CurriculumOverviewScene4 />
         )
       default:
         return(

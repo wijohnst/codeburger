@@ -2,9 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-export default function Block(props) {
+export default function SiteBlock(props) {
   
   const {color, text, shape, delay} = props; 
+
+  let variants;
 
   const ShadowFilter = styled.div`
     filter: drop-shadow((5px 5px 12px #707070));
@@ -15,37 +17,45 @@ export default function Block(props) {
     text-align: center;
     background-color: ${color};
     border-radius: 5px 5px 5px;
-    clip-path: ${() =>{
-    switch (shape) {
-      case 'triangle':
-        return(
-          'polygon(50% 0%, 0% 100%, 100% 100%)'
-        )
-      case 'circle':
-        return(
-          'circle(50% at 50% 50%)'
-        )
-      default:
-        break;
-    }
-   }
-  };
   `
-  const variants={
-    start:{
-      y: -800,
-    },
-    end:{
-      y: 0,
-      transition:{
-        type: 'spring',
-        delay: `${delay}`,
-        duration: 1,
-        stiffness: 50,
-        ease: 'easeInOut'
+ 
+  switch (shape) {
+    case 'triangle':
+      variants ={
+        start:{
+          opacity: 0
+        },
+        end:{
+         
+        }
       }
-    }
+      break;
+      case 'square':
+        variants ={
+          start:{
+            opacity: 0
+          },
+          end:{
+           
+          }
+        }
+        break;
+        case 'circle':
+          variants ={
+            start:{
+              color: `${color}`
+            },
+            end:{
+              scaleX: 4,
+              scaleY: 2.5
+            }
+          }
+          break;
+  
+    default:
+      break;
   }
+
   const TextWrapper = styled.div`
     position: relative;
     top: 45%;
@@ -56,9 +66,10 @@ export default function Block(props) {
           variants={variants}
           initial={'start'}
           animate={['start','end']}
+          transition={{delay: 1, duration: 1, ease:'easeIn'}}
         >
           <TextWrapper>
-            <b>{text}</b>
+            {props.children}
           </TextWrapper>
       </BlockWrapper>
     </ShadowFilter>
