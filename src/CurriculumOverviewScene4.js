@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 import SiteBlocks from './SiteBlocks'
 
-export default function CurriculumOverviewScene4() {
+export default function CurriculumOverviewScene4({advanceScene}) {
   
   const PageWrapper = styled.div`
     background-color: 'white';
@@ -23,6 +23,10 @@ export default function CurriculumOverviewScene4() {
     justify-content: center;
     padding: 10px;
   `
+  const ContinueWrapper = styled(motion.div)`
+    text-align: center;
+    opacity: 0;
+  `
 
   return (
     <PageWrapper>
@@ -32,6 +36,11 @@ export default function CurriculumOverviewScene4() {
       <BlocksWrapper>
         <SiteBlocks />
       </BlocksWrapper>
+      <ContinueWrapper
+        animate={{opacity: 1}}
+        transition={{delay: 3, duration: 1, ease: 'easeIn'}}
+        onClick={advanceScene}
+      > Continue? </ContinueWrapper>
     </PageWrapper>
   )
 }

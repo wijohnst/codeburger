@@ -54,7 +54,7 @@ export default function SiteBlockContent() {
   return (
     <SiteContentWrapper
       animate={{opacity: 1}}
-      transition={{delay: 2, duration: 1}}
+      transition={{delay: 2, duration: 1, ease: 'easeIn'}}
     >
       <AddressBar> 
         <Tab>Tab</Tab>

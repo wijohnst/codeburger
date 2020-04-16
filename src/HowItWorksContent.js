@@ -87,7 +87,7 @@ export default function HowItWorksContent({advancePage}) {
       <CurriculumText style={{backgroundColor: '#BC2423'}}>Based on the real-world needs of resturants, bars, and hospitality businesses</CurriculumText>
     </ContentWrapper2>
     <p style={{textAlign:'center'}}> So no matter why you're here, or where you want to go, CodeBurger is the right place to start.</p>
-    <AdvancePageButton advancePage={advancePage}/>
+    <AdvancePageButton style={{color:'black'}} advancePage={advancePage}/>
     </React.Fragment>
   )
 }

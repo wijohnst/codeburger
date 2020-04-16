@@ -12,7 +12,7 @@ import CurriculumOverview from './CurriculumOverview'
 
 export default function About() {
 
-  const [pageCount, setPageCount] = useState(4);
+  const [pageCount, setPageCount] = useState(0);
   
   const advancePage = () =>{
     setPageCount(pageCount + 1);
@@ -66,7 +66,7 @@ export default function About() {
         return(
           <AboutWrapper>
             <AboutReveal1 animate={{opacity: 1}} transition={{delay: 1, duration: 1, ease:'easeIn'}}>
-              <CurriculumOverview />
+              <CurriculumOverview advancePage={advancePage} />
             </AboutReveal1>
           </AboutWrapper>
         )

@@ -15,7 +15,7 @@ export default function CurriculumOverviewScene2({advanceScene}) {
     padding: 10px;
     margin-bottom: 20px;
     margin-top: 20px;
-    opacity: 0;
+    opacity: 1;
   `
 
   const BlocksWrapper = styled.div`
