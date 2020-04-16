@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
 import FallingBlocks from './FallingBlocks'
-export default function CurriculumOverviewScene1() {
+export default function CurriculumOverviewScene1({advanceScene}) {
   
   const PageWrapper = styled.div`
     background-color: 'white';
@@ -28,7 +28,7 @@ export default function CurriculumOverviewScene1() {
         CodeBurger covers the 3 core technologies of modern web design: HTML, CSS, and JavaScript.
       </TextWrapper>
       <BlocksWrapper>
-        <FallingBlocks />
+        <FallingBlocks advanceScene={advanceScene}/>
       </BlocksWrapper>
     </PageWrapper>
   )

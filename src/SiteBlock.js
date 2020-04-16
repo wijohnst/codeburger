@@ -66,7 +66,7 @@ export default function SiteBlock(props) {
           variants={variants}
           initial={'start'}
           animate={['start','end']}
-          transition={{delay: 1, duration: 1, ease:'easeIn'}}
+          transition={{delay: .5, duration: 1, ease:'easeIn'}}
         >
           <TextWrapper>
             {props.children}

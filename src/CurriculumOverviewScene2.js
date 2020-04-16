@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 import SlidingBlocks from './SlidingBlocks'
 
-export default function CurriculumOverviewScene2() {
+export default function CurriculumOverviewScene2({advanceScene}) {
   
   const PageWrapper = styled.div`
     background-color: 'white';
@@ -33,7 +33,7 @@ export default function CurriculumOverviewScene2() {
         When combined, these technologies create a website.
       </TextWrapper>
       <BlocksWrapper>
-        <SlidingBlocks />
+        <SlidingBlocks advanceScene={advanceScene}/>
       </BlocksWrapper>
     </PageWrapper>
   )

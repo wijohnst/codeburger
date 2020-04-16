@@ -3,8 +3,8 @@ import React from 'react'
 
 import ComponentRefactor from './ComponentRefactor'
 
-import CurriculumOverviewScene4 from './CurriculumOverviewScene4'
-
+import CurriculumOverviewScene1 from './CurriculumOverviewScene1'
+import About from './About'
 
 export default function App() {
   
@@ -12,7 +12,7 @@ export default function App() {
   
   if(testControl === 'test'){
     return (
-      <CurriculumOverviewScene4 />
+      <About />
     )
   }else{
     return(

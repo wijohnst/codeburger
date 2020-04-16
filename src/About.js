@@ -12,7 +12,7 @@ import CurriculumOverview from './CurriculumOverview'
 
 export default function About() {
 
-  const [pageCount, setPageCount] = useState(0);
+  const [pageCount, setPageCount] = useState(4);
   
   const advancePage = () =>{
     setPageCount(pageCount + 1);

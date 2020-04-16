@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function TransformBlock(props) {
   
-  const {color, text, shape, delay} = props; 
+  const {color, text, shape, advanceScene} = props; 
 
   let variants;
 
@@ -85,6 +85,7 @@ export default function TransformBlock(props) {
           initial={'start'}
           animate={['start','end']}
           transition={{delay: 1, duration: 1, ease:'easeIn'}}
+          onAnimationComplete={advanceScene}
         >
           <TextWrapper>
             <b>{text}</b>

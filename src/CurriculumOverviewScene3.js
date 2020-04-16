@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 import MorphingBlocks from './MorphingBlocks'
 
-export default function CurriculumOverviewScene3() {
+export default function CurriculumOverviewScene3({advanceScene}) {
   
   const PageWrapper = styled.div`
     background-color: 'white';
@@ -30,7 +30,7 @@ export default function CurriculumOverviewScene3() {
         When combined, these technologies create a website.
       </TextWrapper>
       <BlocksWrapper>
-        <MorphingBlocks />
+        <MorphingBlocks advanceScene={advanceScene}/>
       </BlocksWrapper>
     </PageWrapper>
   )

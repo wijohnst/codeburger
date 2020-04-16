@@ -22,15 +22,15 @@ export default function CurriculumOverview() {
     switch (sceneNumber) {
       case 0:
         return(
-        <CurriculumOverviewScene1 />
+        <CurriculumOverviewScene1 advanceScene={advanceScene}/>
         )
       case 1:
         return(
-          <CurriculumOverviewScene2 />
+          <CurriculumOverviewScene2 advanceScene={advanceScene}/>
         )
       case 2:
         return(
-          <CurriculumOverviewScene3 />
+          <CurriculumOverviewScene3 advanceScene={advanceScene}/>
         )
       case 3:
         return(
@@ -50,7 +50,7 @@ export default function CurriculumOverview() {
   return(
     <CurriculumOverviewWrapper>
       {dynamicContent(sceneNumber)}
-      <button onClick={advanceScene}>Next Scene</button>
+      {/* <div onClick={advanceScene}>Continue</div> */}
     </CurriculumOverviewWrapper>
 
  

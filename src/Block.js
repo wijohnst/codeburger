@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function Block(props) {
   
-  const {color, text, shape, delay} = props; 
+  const {color, text, shape, delay, advanceScene} = props; 
 
   const ShadowFilter = styled.div`
     filter: drop-shadow((5px 5px 12px #707070));
@@ -56,6 +56,7 @@ export default function Block(props) {
           variants={variants}
           initial={'start'}
           animate={['start','end']}
+          onAnimationComplete={advanceScene}
         >
           <TextWrapper>
             <b>{text}</b>
