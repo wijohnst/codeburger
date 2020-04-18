@@ -32,6 +32,8 @@ export default function HowItWorksContent({advancePage}) {
     background-color: lightgray;
     padding: 5px;
     min-height: 200px;
+    margin: 0 auto;
+    max-width: 90%;
   `
   const InfoListItem = styled.li`
     text-align: left;
@@ -41,8 +43,8 @@ export default function HowItWorksContent({advancePage}) {
     top: -70px;
   `
   const ContentWrapper2 = styled.div`
-    position: relative;
-    top: -90px;
+    /* position: relative;
+    top: -90px; */
   `
   const CurriculumText = styled.h2`
     text-align: center;
@@ -78,13 +80,13 @@ export default function HowItWorksContent({advancePage}) {
           </ul>
       </InfoWrapper>
     </ContentWrapper>
-    <CenterBurger>
+    {/* <CenterBurger>
       <BurgerLogo />
-    </CenterBurger>
+    </CenterBurger> */}
     <ContentWrapper2>
       <p> At CodeBurger, 100% of the curriculum is always:</p>
-      <CurriculumText style={{backgroundColor:'#FCEE21', lineHeight: 2}}>Beginner Level</CurriculumText><br />
-      <CurriculumText style={{backgroundColor: '#BC2423'}}>Based on the real-world needs of resturants, bars, and hospitality businesses</CurriculumText>
+      <CurriculumText style={{border:'thick solid #FCEE21', lineHeight: 2}}>Beginner Level</CurriculumText><br />
+      <CurriculumText style={{border:'thick solid #BC2423'}}>Based on the real-world needs of resturants, bars, and hospitality businesses</CurriculumText>
     </ContentWrapper2>
     <p style={{textAlign:'center'}}> So no matter why you're here, or where you want to go, CodeBurger is the right place to start.</p>
     <AdvancePageButton style={{color:'black'}} advancePage={advancePage}/>

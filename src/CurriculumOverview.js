@@ -8,7 +8,7 @@ import CurriculumOverviewScene3 from './CurriculumOverviewScene3'
 import CurriculumOverviewScene4 from './CurriculumOverviewScene4'
 import CurriculumOverviewScene5 from './CurriculumOverviewScene5'
 
-export default function CurriculumOverview() {
+export default function CurriculumOverview({advancePage}) {
   
   const [sceneNumber, setSceneNumber] = useState(0);
 
@@ -39,7 +39,7 @@ export default function CurriculumOverview() {
         )
       case 4:
         return(
-          <CurriculumOverviewScene5 advanceScene={advanceScene} />
+          <CurriculumOverviewScene5 advancePage={advancePage} />
         )
       default:
         return(

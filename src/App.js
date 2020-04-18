@@ -1,24 +1,30 @@
 import React from 'react'
 
 
-import ComponentRefactor from './ComponentRefactor'
+import DesktopLayout from './DesktopLayout'
+import MobileLayout2 from './Mobile/MobileLayout2'
 
 import CurriculumOverviewScene5 from './CurriculumOverviewScene5'
-import About from './About'
-import ToggleTest from './ToggleTest'
+import MobileCardTab from './Components/MobileCardTab'
 
 export default function App() {
   
-  const testControl = '';
+  const testControl = 'desktop';
   
   if(testControl === 'test'){
     return (
-      <CurriculumOverviewScene5 />
+      <MobileCardTab color={'#BC2423'} secondaryColor={'#23BC6A'}/>
     )
-  }else{
+  }else if(testControl === 'desktop'){
     return(
-      <ComponentRefactor />
+      <DesktopLayout />
     )
+  }else if(testControl === 'mobile'){
+     return( 
+      <MobileLayout2 />
+     )
   }
- 
 }
+
+  
+
