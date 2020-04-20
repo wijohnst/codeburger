@@ -9,7 +9,7 @@ export default function MobileCard2(props) {
   const variants = {
     open:{
       height: '50vh',
-      overflow: 'none'
+      overflow: 'scroll'
     },
     closed:{
       height: '12vh',
