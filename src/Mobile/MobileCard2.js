@@ -22,12 +22,13 @@ export default function MobileCard2(props) {
     flex-direction: column;
     background-color: ${color};
     padding: 10px;
+    height: 12vh;
   `
 
   return (
     <MobileCardWrapper
       variants={variants}
-      initial={isOpen ? 'closed' : 'open'}
+      initial={'closed'}
       animate={isOpen ? 'open' : 'closed'}
       transition={{duration: 1, ease: 'easeInOut'}}
     >
