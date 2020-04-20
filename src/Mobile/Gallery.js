@@ -13,11 +13,15 @@ const variants={
     x: 0,
     transition:{
       duration: 1,
-      ease: 'easeInOut'
+      ease: 'easeIn'
     }
   },
   exit:{
-    x: -400,
+    opacity: 0,
+    transition:{
+      duration: 1,
+      ease: 'easeOut'
+    }
   }
 }
 
@@ -35,7 +39,7 @@ export default function Gallery({scenes}) {
     const parentWidth = constraintsRef.current.getBoundingClientRect().width;
 
     function updateScene(xPosition){
-      if(xPosition >= parentWidth * .25){
+      if(xPosition >= parentWidth * .33){
         setSceneNumber(nextScene);
       }
     }
@@ -56,7 +60,7 @@ export default function Gallery({scenes}) {
     if(sceneNumber < scenes.length){
       return scenes[sceneNumber];
     }else{
-      return <FinalScene variants={variants} />
+      return <FinalScene />
     }
     
   }

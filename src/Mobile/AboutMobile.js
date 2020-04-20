@@ -8,10 +8,11 @@ import Scene2 from './About_Scenes/Scene2'
 const variants={
   pre:{
     x: -400,
-    // opacity: 0
+    opacity: 0
   },
   enter:{
     x: 0,
+    opacity: 1,
     transition:{
       duration: 1,
       ease: 'easeInOut'
@@ -19,6 +20,7 @@ const variants={
   },
   exit:{
     x: 400,
+    opacity: 0
   }
 }
 
