@@ -22,7 +22,6 @@ export default function MobileCard2(props) {
     flex-direction: column;
     background-color: ${color};
     padding: 10px;
-    
   `
 
   return (
