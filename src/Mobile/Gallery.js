@@ -4,26 +4,7 @@ import { motion, useMotionValue } from 'framer-motion'
 
 import FinalScene from './FinalScene'
 
-const variants={
-  pre:{
-    x: -400,
-    // opacity: 0
-  },
-  enter:{
-    x: 0,
-    transition:{
-      duration: 1,
-      ease: 'easeIn'
-    }
-  },
-  exit:{
-    opacity: 0,
-    transition:{
-      duration: 1,
-      ease: 'easeOut'
-    }
-  }
-}
+
 
 
 export default function Gallery({scenes}) {
@@ -66,26 +47,34 @@ export default function Gallery({scenes}) {
   }
 
   const ViewArea = styled(motion.div)`
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
   `
   const ContentWrapper = styled(motion.div)`
     display: flex;
-    height: 200px;
+    flex-direction: column;
+  `
+
+  const SwipePromptWrapper = styled(motion.div)`
+    text-align: center;
   `
 
   return (
-    <ViewArea ref={constraintsRef}>
-      <ContentWrapper 
-        drag='x' 
-        dragElastic='0.0' 
-        dragConstraints={constraintsRef} 
-        style={{x}} 
-        ref={positionRef}
-      >
-        {getScene()}
-      </ContentWrapper>
-      <p>Swipe to Advance</p>
-    </ViewArea>
+    <React.Fragment>
+      <ViewArea ref={constraintsRef}>
+        <ContentWrapper 
+          drag='x' 
+          dragElastic='0.0' 
+          dragConstraints={constraintsRef} 
+          style={{x}} 
+          ref={positionRef}
+        >
+          {getScene()}
+        </ContentWrapper>
+      </ViewArea>
+      <SwipePromptWrapper>
+      <p>>> Swipe to Advance >></p>
+    </SwipePromptWrapper>
+  </React.Fragment>
   )
 }

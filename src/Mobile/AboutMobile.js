@@ -25,9 +25,10 @@ const variants={
 }
 
 export default function AboutMobile() {
+
   return (
     <div>
-      <Gallery scenes={[<Scene1 variants={variants}/>, <Scene2 variants={variants} />]}/>
+      <Gallery scenes={[<Scene1 variants={variants} />, <Scene2 variants={variants} />]}/>
     </div>
   )
 }

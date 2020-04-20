@@ -7,12 +7,15 @@ import ScrollLogo from '../ScrollLogo'
 import MobileCardTab2 from './MobileCardTab2'
 import AboutMobile from './AboutMobile'
 
+import AboutImage from '../about_image.png'
+import Image from '../Image'
+
 export default function MobileLayout2() {
   
   const [isOpen, setIsOpen] = useState([false,false,false,false]);
 
   const sectionHeadings = ['About', 'Schedule', 'Resources', 'Join'];
-  const sectionContent = [<AboutMobile />,'','','']
+  const sectionContent = [<AboutMobile  />,'','','']
   const sectionColors=['#23BC6A','#BC2423','#FCEE21','#534741'];
   const secondaryColors =['white','#23BC6A','#BC2423','#FCEE21'];
 
