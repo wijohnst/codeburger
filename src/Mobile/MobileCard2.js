@@ -8,12 +8,12 @@ export default function MobileCard2(props) {
 
   const variants = {
     open:{
-      height: '100%',
+      height: '50vh',
       overflow: 'scroll'
     },
     closed:{
       height: '12vh',
-      overflow: 'scroll'
+      overflow: 'hidden'
     }
   }
   
@@ -27,7 +27,7 @@ export default function MobileCard2(props) {
   return (
     <MobileCardWrapper
       variants={variants}
-      initial={'closed'}
+      initial={isOpen ? 'closed' : 'open'}
       animate={isOpen ? 'open' : 'closed'}
       transition={{duration: 1, ease: 'easeInOut'}}
     >

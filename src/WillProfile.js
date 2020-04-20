@@ -34,7 +34,7 @@ export default function WillProfile({advancePage}) {
       <HistoryWrapper
         animate={{opacity: 1}}
         transition={{delay: 4, duration: 1, ease:'easeIn'}}>
-        <WillHistory />
+        <WillHistory textAlign={'left'} />
       </HistoryWrapper>
       <ButtonWrapper
         animate={{opacity: 1}}
