@@ -11,7 +11,7 @@ export default function AboutMobileContent() {
   `
   return (
     <AboutMobileContentWrapper>
-      <About />
+      
     </AboutMobileContentWrapper>
   )
 }
