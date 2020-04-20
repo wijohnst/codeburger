@@ -9,7 +9,7 @@ import DragTest2 from './Scratch/DragTest2'
 
 export default function App() {
   
-  const testControl = 'test';
+  const testControl = 'mobile';
   
   if(testControl === 'test'){
     return (

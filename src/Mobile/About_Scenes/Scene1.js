@@ -14,7 +14,7 @@ export default function Scene1({variants}) {
     <AnimatePresence>
       <SceneWrapper
       variants={variants}
-      initial={'pre'}
+      initial={'enter'}
       animate={['pre', 'enter']}
       exit={'exit'}
       >
