@@ -13,7 +13,7 @@ export default function Scene1(props) {
   console.log(components);
   console.log(media);
   const SceneWrapper= styled(motion.div)`
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
     display: flex;
     flex-direction: column;
     justify-content: center;
