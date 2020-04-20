@@ -35,7 +35,7 @@ export default function Gallery({scenes}) {
     const parentWidth = constraintsRef.current.getBoundingClientRect().width;
 
     function updateScene(xPosition){
-      if(xPosition >= parentWidth * .75){
+      if(xPosition >= parentWidth * .25){
         setSceneNumber(nextScene);
       }
     }
