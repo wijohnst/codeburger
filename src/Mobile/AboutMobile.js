@@ -18,7 +18,7 @@ const variants={
     }
   },
   exit:{
-    x: -400,
+    x: 400,
   }
 }
 
