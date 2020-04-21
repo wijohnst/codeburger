@@ -18,7 +18,7 @@ export default function ClickGallery(props) {
   `
   if(sceneNumber === 0){
     return (
-      <AnimatePresence>
+      <AnimatePresence key={'First page'}>
         <ContentWrapper>
           {scenes[sceneNumber]}
         </ContentWrapper>
@@ -27,17 +27,17 @@ export default function ClickGallery(props) {
     )
   }else if(sceneNumber < scenes.length){
    return(
-      <AnimatePresence>
+      <AnimatePresence key={'Middle pages'}>
         <ContentWrapper>
           {scenes[sceneNumber]}
         </ContentWrapper>
-        <button onClick={() => handlePageNav(true)}>Next</button>
-        <button onClick={() => handlePageNav(false)}>Back</button>
+        <button onClick={() => handlePageNav(true)} >Next</button>
+        <button onClick={() => handlePageNav(false)} >Back</button>
     </AnimatePresence>
    )
  }else if(sceneNumber === scenes.length){
    return(
-     <AnimatePresence>
+     <AnimatePresence key={'Last page'}>
        <ContentWrapper>
          <FinalScene />
        </ContentWrapper>

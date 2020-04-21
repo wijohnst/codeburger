@@ -8,6 +8,11 @@ export default function Scene1({variants}) {
     background-color: lightgreen;
     width: 100%;
     box-shadow: 5px 5px 12px #707070;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
   `
 
   return (
