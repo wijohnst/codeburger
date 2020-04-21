@@ -14,15 +14,30 @@ export default function ClickGallery(props) {
   }
   //Styling
   const ContentWrapper = styled(motion.div)`
-
+  text-align: center;
+  `
+  const ForwardButton = styled.div`
+    display: inline-block;
+    border: solid thin #707070;
+    padding: 5px;
+    margin: 5px;
+  `
+  const BackButton = styled.div`
+    display: inline-block;
+    border: solid thin #707070;
+    padding: 5px;
+    margin-top: 5px;
+  `
+  const NavWrapper = styled.div`
+    text-align: center;
   `
   if(sceneNumber === 0){
     return (
       <AnimatePresence key={'First page'}>
         <ContentWrapper>
           {scenes[sceneNumber]}
+        <ForwardButton onClick={() => handlePageNav(true)}>Next</ForwardButton>
         </ContentWrapper>
-        <button onClick={() => handlePageNav(true)}>Next</button>
       </AnimatePresence>
     )
   }else if(sceneNumber < scenes.length){
@@ -31,17 +46,20 @@ export default function ClickGallery(props) {
         <ContentWrapper>
           {scenes[sceneNumber]}
         </ContentWrapper>
-        <button onClick={() => handlePageNav(true)} >Next</button>
-        <button onClick={() => handlePageNav(false)} >Back</button>
+        <NavWrapper>
+          <BackButton onClick={() => handlePageNav(false)} >Back</BackButton>
+          <ForwardButton onClick={() => handlePageNav(true)} >Next</ForwardButton>
+        </NavWrapper>
     </AnimatePresence>
    )
  }else if(sceneNumber === scenes.length){
    return(
      <AnimatePresence key={'Last page'}>
        <ContentWrapper>
-         <FinalScene />
+          <FinalScene />
+          <BackButton onClick={() => handlePageNav(false)}>Back</BackButton>
        </ContentWrapper>
-       <button onClick={() => handlePageNav(false)}>Back</button>
+       
      </AnimatePresence>
    )
  }

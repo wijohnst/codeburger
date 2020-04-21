@@ -24,10 +24,11 @@ export default function Scene1(props) {
   return (
     <AnimatePresence>
       <SceneWrapper
+      key="sceneWrapper"
       variants={variants}
-      initial={'enter'}
+      initial='enter'
       animate={['pre', 'enter']}
-      exit={'exit'}
+      exit='exit'
       >
        <p>Technical Skill Training for Restaurant People.</p>
        <Image>

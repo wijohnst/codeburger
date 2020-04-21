@@ -6,6 +6,7 @@ import Scene1 from './About_Scenes/Scene1'
 import Scene2 from './About_Scenes/Scene2'
 import Scene3 from './About_Scenes/Scene3'
 import Scene4 from './About_Scenes/Scene4'
+import Scene5 from './About_Scenes/Scene5'
 
 
 const variants={
@@ -34,7 +35,8 @@ export default function AboutMobile() {
       <ClickGallery scenes={[<Scene1 variants={variants} />, 
                         <Scene2 variants={variants} />,
                         <Scene3 variants={variants} />,
-                        <Scene4 variants={variants} />
+                        <Scene4 variants={variants} />,
+                        <Scene5 variants={variants} />
                         ]}/>
     </div>
   )

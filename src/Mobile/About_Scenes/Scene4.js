@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 import Image from '../../Image'
 import TransitionChef from '../../transition_chef.png'
 import Entrepreneur from '../../entrepreneur.png'
 
 
-const PageWrapper = styled.div`
+const PageWrapper = styled(motion.div)`
   background-color: lightgreen;
   box-shadow: 5px 5px 12px #707070;
   display: flex;
@@ -23,9 +24,14 @@ const InfoWrapper = styled.div`
   
 `
 
-export default function Scene4() {
+export default function Scene4({variants}){
   return (
-    <PageWrapper>
+    <PageWrapper
+      variants={variants}
+      initial={'pre'}
+      animate={['pre', 'enter']}
+      exit={'exit'}
+    >
       <p>CodeBurger is designed with 2 specific kinds of students in mind.</p>
       <Image>
         <img src={TransitionChef} alt={'Pregnant Chef'} />
@@ -52,9 +58,9 @@ export default function Scene4() {
       <p> At CodeBurger, <u>100% of the curriculum is always:</u></p>
       <ul>
         <li style={{textAlign: 'left', marginBottom: '5px'}}>Beginner Level</li>
-        <li>Based on the real-world technology needs of restaurants, bards, and hospitality businesses</li>
+        <li>Based on the real-world technology needs of restaurants, bars, and hospitality businesses</li>
       </ul>
-      <p>This means that no matter why you're here, or where you want to go, codeBUrger is the right place to start.</p>
+      <p>This means that no matter why you're here, or where you want to go, CodeBurger is the right place to start.</p>
     </PageWrapper>
   )
 }
