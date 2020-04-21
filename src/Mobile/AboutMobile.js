@@ -1,11 +1,12 @@
 import React from 'react'
 
-import Gallery from './Gallery'
+import ClickGallery from '../Scratch/ClickGallery/ClickGallery'
 
 import Scene1 from './About_Scenes/Scene1'
 import Scene2 from './About_Scenes/Scene2'
 import Scene3 from './About_Scenes/Scene3'
 import Scene4 from './About_Scenes/Scene4'
+
 
 const variants={
   pre:{
@@ -30,7 +31,7 @@ export default function AboutMobile() {
 
   return (
     <div>
-      <Gallery scenes={[<Scene1 variants={variants} />, 
+      <ClickGallery scenes={[<Scene1 variants={variants} />, 
                         <Scene2 variants={variants} />,
                         <Scene3 variants={variants} />,
                         <Scene4 variants={variants} />

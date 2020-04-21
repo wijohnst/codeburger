@@ -16,7 +16,7 @@ const PageWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding: 5px;
-  overflow: scroll;
+  overflow-y: scroll;
 `
 const InfoWrapper = styled.div`
   background-color: lightgrey;
