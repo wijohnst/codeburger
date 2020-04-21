@@ -20,7 +20,7 @@ export default function Gallery({scenes}) {
     const parentWidth = constraintsRef.current.getBoundingClientRect().width;
 
     function updateScene(xPosition){
-      if(xPosition >= parentWidth * .25){
+      if(xPosition >= parentWidth * .15){
         setSceneNumber(nextScene);
       }
     }
@@ -32,7 +32,6 @@ export default function Gallery({scenes}) {
     })
     
     return () =>{
-      // x.set(0)
       unsubscribeX()
     }
   })
@@ -47,8 +46,6 @@ export default function Gallery({scenes}) {
   }
 
   const ViewArea = styled(motion.div)`
-    /* display: flex;
-    flex-direction: column; */
   `
   const ContentWrapper = styled(motion.div)`
     display: flex;
@@ -62,10 +59,12 @@ export default function Gallery({scenes}) {
   return (
     <React.Fragment>
       <ViewArea ref={constraintsRef}>
-        <ContentWrapper 
-          drag='x' 
-          dragElastic='0.0' 
+        <ContentWrapper
+          dragDirectionLock
+          drag='x'
+          dragElastic='0.7' 
           dragConstraints={constraintsRef} 
+          dragMomentum={false}
           style={{x}} 
           ref={positionRef}
         >

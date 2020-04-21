@@ -16,9 +16,11 @@ const PageWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding: 5px;
+  overflow: scroll;
 `
 const InfoWrapper = styled.div`
   background-color: lightgrey;
+  
 `
 
 export default function Scene4() {
