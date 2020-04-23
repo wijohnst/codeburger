@@ -14,11 +14,6 @@ export default function MobileLayout2() {
   
   const [isOpen, setIsOpen] = useState([false,false,false,false]);
 
-  const sectionHeadings = ['About', 'Schedule', 'Resources', 'Join'];
-  const sectionContent = [<AboutMobile  />,'','','']
-  const sectionColors=['#23BC6A','#BC2423','#FCEE21','#534741'];
-  const secondaryColors =['white','#23BC6A','#BC2423','#FCEE21'];
-
   const updateOpen = (targetCard) =>{
     console.log(`Target Card = ${targetCard + 1}`);
 
@@ -32,6 +27,13 @@ export default function MobileLayout2() {
     
     setIsOpen(openArray);
   }
+
+  const sectionHeadings = ['About', 'Schedule', 'Resources', 'Join'];
+  const sectionContent = [<AboutMobile  updateOpen={updateOpen}/>,'','','']
+  const sectionColors=['#23BC6A','#BC2423','#FCEE21','#534741'];
+  const secondaryColors =['white','#23BC6A','#BC2423','#FCEE21'];
+
+  
 
   const CardTabWrapper = styled.div`
     position: relative;

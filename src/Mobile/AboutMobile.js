@@ -33,7 +33,7 @@ const variants={
   }
 }
 
-export default function AboutMobile() {
+export default function AboutMobile({updateOpen}) {
 
   return (
     <div>
@@ -48,7 +48,7 @@ export default function AboutMobile() {
                         <Scene8 variants={variants} />,
                         <Scene9 variants={variants} />,
                         <Scene10 variants={variants} />
-                        ]}/>
+                        ]} updateOpen={updateOpen} indexNumber={0}/>
     </div>
   )
 }
