@@ -6,7 +6,7 @@ import FinalScene from '../FinalScene'
 
 export default function ClickGallery(props) {
   
-  const [sceneNumber, setSceneNumber] = useState(0);
+  const [sceneNumber, setSceneNumber] = useState(7);
   const {scenes} = props;
 
   const handlePageNav = (isPageUp) =>{

@@ -17,7 +17,7 @@ const BlocksWrapper = styled.div`
   align-items: center;
 `
 
-export default function Scene5({variants}) {
+export default function Scene6({variants}) {
 
   const [sceneNumber, setSceneNumber] = useState(0);
     

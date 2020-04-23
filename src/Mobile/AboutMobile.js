@@ -9,6 +9,9 @@ import Scene4 from './About_Scenes/Scene4'
 import Scene5 from './About_Scenes/Scene5'
 import Scene6 from './About_Scenes/Scene6'
 import Scene7 from './About_Scenes/Scene7'
+import Scene8 from './About_Scenes/Scene8'
+import Scene9 from './About_Scenes/Scene9'
+import Scene10 from './About_Scenes/Scene10'
 
 
 const variants={
@@ -41,7 +44,10 @@ export default function AboutMobile() {
                         <Scene4 variants={variants} />,
                         <Scene5 variants={variants} />,
                         <Scene6 variants={variants} />,
-                        <Scene7 variants={variants} />
+                        <Scene7 variants={variants} />,
+                        <Scene8 variants={variants} />,
+                        <Scene9 variants={variants} />,
+                        <Scene10 variants={variants} />
                         ]}/>
     </div>
   )

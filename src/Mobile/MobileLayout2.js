@@ -12,7 +12,7 @@ import Image from '../Image'
 
 export default function MobileLayout2() {
   
-  const [isOpen, setIsOpen] = useState([false,false,false,false]);
+  const [isOpen, setIsOpen] = useState([true,false,false,false]);
 
   const sectionHeadings = ['About', 'Schedule', 'Resources', 'Join'];
   const sectionContent = [<AboutMobile  />,'','','']
