@@ -27,7 +27,7 @@ export default function Scene10({variants}){
       exit={'exit'}
     >
      <MapPin color={'#BC2423'} pinCenterColor={'white'} />
-     <h4><u>JavaScript for Restaurants for Restaurants</u></h4>
+     <h4><u>JavaScript for Restaurants</u></h4>
      <p>If HTML and CSS are about making the web <i>look like something</i>,
     JavaScript is here to make it <b><i>do something.</i></b> JavaScript is the tool that 
     allows us to create more interactive and dynamic web sites. <b>JavaScript for Restaurants</b> answers the
