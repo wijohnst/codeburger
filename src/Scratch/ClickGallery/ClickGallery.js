@@ -41,7 +41,7 @@ export default function ClickGallery(props) {
         </ContentWrapper>
       </AnimatePresence>
     )
-  }else if(sceneNumber < scenes.length){
+  }else if(sceneNumber < scenes.length - 1){
    return(
       <AnimatePresence key={'Middle pages'}>
         <ContentWrapper>
@@ -53,12 +53,15 @@ export default function ClickGallery(props) {
         </NavWrapper>
     </AnimatePresence>
    )
- }else if(sceneNumber === scenes.length){
+ }else if(sceneNumber === scenes.length - 1){
    return(
      <AnimatePresence key={'Last page'}>
        <ContentWrapper>
-          <FinalScene updateOpen={updateOpen} indexNumber={indexNumber}/>
-       </ContentWrapper>
+          {scenes[sceneNumber]}
+        </ContentWrapper>
+        <NavWrapper>
+          <ForwardButton onClick={() => updateOpen(indexNumber)} >Continue</ForwardButton>
+        </NavWrapper>
      </AnimatePresence>
    )
  }

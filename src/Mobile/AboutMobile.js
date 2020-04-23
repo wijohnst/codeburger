@@ -12,6 +12,7 @@ import Scene7 from './About_Scenes/Scene7'
 import Scene8 from './About_Scenes/Scene8'
 import Scene9 from './About_Scenes/Scene9'
 import Scene10 from './About_Scenes/Scene10'
+import Scene11 from './About_Scenes/Scene11'
 
 
 const variants={
@@ -47,7 +48,8 @@ export default function AboutMobile({updateOpen}) {
                         <Scene7 variants={variants} />,
                         <Scene8 variants={variants} />,
                         <Scene9 variants={variants} />,
-                        <Scene10 variants={variants} />
+                        <Scene10 variants={variants} />,
+                        <Scene11 variants={variants} />
                         ]} updateOpen={updateOpen} indexNumber={0}/>
     </div>
   )
