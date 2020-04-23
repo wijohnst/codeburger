@@ -18,13 +18,13 @@ export default function ClickGallery(props) {
   `
   const ForwardButton = styled.div`
     display: inline-block;
-    border: solid thin #707070;
+    border: solid thin #707070; */
     padding: 5px;
     margin: 5px;
   `
   const BackButton = styled.div`
     display: inline-block;
-    border: solid thin #707070;
+    border: solid thin #707070; */
     padding: 5px;
     margin-top: 5px;
   `

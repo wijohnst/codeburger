@@ -55,7 +55,6 @@ export default function CurriculumOverview({advancePage}) {
   return(
     <CurriculumOverviewWrapper>
       {dynamicContent(sceneNumber)}
-      {/* <div onClick={advanceScene}>Continue</div> */}
     </CurriculumOverviewWrapper>
 
  

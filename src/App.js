@@ -9,13 +9,15 @@ import ClickGallery from './Scratch/ClickGallery/ClickGallery'
 import Scene1 from './Mobile/About_Scenes/Scene1'
 import Scene2 from './Mobile/About_Scenes/Scene2'
 
+import MobileSiteBlocks from './Mobile/About_Scenes/BlockAnimation/MobileSiteBlocks'
+
 export default function App() {
   
   const testControl = 'mobile';
   
   if(testControl === 'test'){
     return (
-      <ClickGallery scenes={[<Scene1 />,<Scene2 />]}/>
+      <MobileSiteBlocks />
     )
   }else if(testControl === 'desktop'){
     return(

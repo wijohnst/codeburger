@@ -7,6 +7,8 @@ import Scene2 from './About_Scenes/Scene2'
 import Scene3 from './About_Scenes/Scene3'
 import Scene4 from './About_Scenes/Scene4'
 import Scene5 from './About_Scenes/Scene5'
+import Scene6 from './About_Scenes/Scene6'
+import Scene7 from './About_Scenes/Scene7'
 
 
 const variants={
@@ -32,11 +34,14 @@ export default function AboutMobile() {
 
   return (
     <div>
-      <ClickGallery scenes={[<Scene1 variants={variants} />, 
+      <ClickGallery scenes={[
+                        <Scene1 variants={variants} />, 
                         <Scene2 variants={variants} />,
                         <Scene3 variants={variants} />,
                         <Scene4 variants={variants} />,
-                        <Scene5 variants={variants} />
+                        <Scene5 variants={variants} />,
+                        <Scene6 variants={variants} />,
+                        <Scene7 variants={variants} />
                         ]}/>
     </div>
   )
