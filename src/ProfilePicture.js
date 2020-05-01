@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
 
 import WillProfile from './will_profile.jpeg'
 

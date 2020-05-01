@@ -3,17 +3,17 @@ import styled from 'styled-components'
 
 import DifficultyMeter from './DifficultyMeter'
 
+const TextWrapper = styled.div`
+text-align: left;
+padding: 5px;
+`
+
+const DifficultyMeterWrapper = styled.div`
+text-align: left;
+`
+
 export default function HtmlDescription() {
   
-  const TextWrapper = styled.div`
-    text-align: left;
-    padding: 5px;
-  `
-
-  const DifficultyMeterWrapper = styled.div`
-    text-align: left;
-
-  `
   return (
    <React.Fragment>
    <TextWrapper>If a website was a house, HTML would be the foundation, so it make sense that this

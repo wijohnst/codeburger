@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-import Image from '../../Image'
-import TransitionChef from '../../transition_chef.png'
-import Entrepreneur from '../../entrepreneur.png'
+import Image from '../../../Image'
+import TransitionChef from '../../../transition_chef.png'
+import Entrepreneur from '../../../entrepreneur.png'
 
 
 const PageWrapper = styled(motion.div)`

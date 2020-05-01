@@ -2,16 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion, AnimatePresence } from 'framer-motion'
 
-import Image from '../../Image'
-import AboutImage from '../../about_image.png'
+import Image from '../../../Image'
+import AboutImage from '../../../about_image.png'
 
 
 export default function Scene1(props) {
   
-  const {variants, components, media} = props;
+  const {variants} = props;
 
-  console.log(components);
-  console.log(media);
   const SceneWrapper= styled(motion.div)`
     background-color: lightgreen;
     display: flex;

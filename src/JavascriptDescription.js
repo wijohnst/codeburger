@@ -3,17 +3,17 @@ import styled from 'styled-components'
 
 import DifficultyMeter from './DifficultyMeter'
 
+const TextWrapper = styled.div`
+text-align: left;
+padding: 5px;
+`
+
+const DifficultyMeterWrapper = styled.div`
+text-align: left;
+`
+
 export default function JavascriptDescription() {
   
-  const TextWrapper = styled.div`
-    text-align: left;
-    padding: 5px;
-  `
-
-  const DifficultyMeterWrapper = styled.div`
-    text-align: left;
-
-  `
   return (
    <React.Fragment>
    <TextWrapper>

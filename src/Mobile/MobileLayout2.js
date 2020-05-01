@@ -1,18 +1,26 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
 
-import MobileCard2 from './MobileCard2'
+import MobileCard2 from './About/MobileCard2'
 import ScrollLogo from '../ScrollLogo'
 import MobileCardTab2 from './MobileCardTab2'
-import AboutMobile from './AboutMobile'
 
-import AboutImage from '../about_image.png'
-import Image from '../Image'
+import AboutMobile from './About/AboutMobile'
+import ScheduleMobile from './Schedule/ScheduleMobile'
+import ResourcesMobile from './Resources/ResourcesMobile'
+
+const CardTabWrapper = styled.div`
+position: relative;
+top: 80px;
+`
+const AppViewWrapper = styled.div`
+max-width: 500px;
+margin: 0 auto;
+`
 
 export default function MobileLayout2() {
   
-  const [isOpen, setIsOpen] = useState([false,false,false,false]);
+  const [isOpen, setIsOpen] = useState([true,false,false,false]);
 
   const updateOpen = (targetCard) =>{
     console.log(`Target Card = ${targetCard + 1}`);
@@ -29,19 +37,12 @@ export default function MobileLayout2() {
   }
 
   const sectionHeadings = ['About', 'Schedule', 'Resources', 'Join'];
-  const sectionContent = [<AboutMobile  updateOpen={updateOpen}/>,'','','']
+  const sectionContent = [<AboutMobile  updateOpen={updateOpen}/>,<ScheduleMobile updateOpen={updateOpen} />,<ResourcesMobile updateOpen={updateOpen} />,'']
   const sectionColors=['#23BC6A','#BC2423','#FCEE21','#534741'];
   const secondaryColors =['white','#23BC6A','#BC2423','#FCEE21'];
 
-  
-
-  const CardTabWrapper = styled.div`
-    position: relative;
-    top: 80px;
-  `
-
   return (
-    <React.Fragment>
+    <AppViewWrapper>
       <ScrollLogo />
       <CardTabWrapper>
       {isOpen.map((element, index) =>{
@@ -70,6 +71,6 @@ export default function MobileLayout2() {
         )
       }
       </CardTabWrapper>
-    </React.Fragment>
+      </AppViewWrapper>
   )
 }

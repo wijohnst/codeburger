@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import TextLogo from '../../../TextLogo'
+import TextLogo from '../../../../TextLogo'
 export default function MobileSiteIllustration() {
   
   const PageWrapper = styled.div`

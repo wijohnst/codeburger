@@ -4,10 +4,10 @@ import { motion } from 'framer-motion'
 
 import Block from './Block'
 
+const BlocksWrapper = styled(motion.div)``
+
 export default function FallingBlocks({advanceScene}) {
-  const BlocksWrapper = styled(motion.div)`
-    /* background-color: lightgreen; */
-  `
+  
   return (
     <BlocksWrapper>
       <Block color={'#23BC6A'}  text={'HTML'} shape={'triangle'} delay={4} advanceScene={advanceScene}/>

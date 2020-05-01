@@ -4,6 +4,20 @@ import { motion } from 'framer-motion'
 
 import HowItWorksContent from './HowItWorksContent'
 
+const HowItWorksWrapper = styled(motion.div)`
+padding: 10px;
+border-radius: 5px 5px 5px 5px;
+box-shadow: 5px 5px 12px #707070;
+margin: 0 auto;
+background-color: white;
+height: 90%;
+overflow: scroll;
+`
+const ContentWrapper = styled(motion.div)`
+opacity: 0;
+margin: 0 auto;
+`
+
 export default function HowItWorks({advancePage}) {
   
  const mainWrapperVariants={
@@ -25,19 +39,6 @@ export default function HowItWorks({advancePage}) {
     }
   }
 
-  const HowItWorksWrapper = styled(motion.div)`
-    padding: 10px;
-    border-radius: 5px 5px 5px 5px;
-    box-shadow: 5px 5px 12px #707070;
-    margin: 0 auto;
-    background-color: white;
-    height: 90%;
-    overflow: scroll;
-  `
-  const ContentWrapper = styled(motion.div)`
-    opacity: 0;
-    margin: 0 auto;
-  `
   return (
     <HowItWorksWrapper
       variants={mainWrapperVariants}

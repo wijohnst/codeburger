@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-import Label from './Label'
+import Label from '../Label'
 
 export default function FrameTest() {
   
@@ -14,13 +14,6 @@ export default function FrameTest() {
     setClicked(!clicked);
     setIsGrown(!isGrown);
   }
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() =>{
-  //     handleClick()
-  //   }, 3000);
-  //   return () => clearTimeout(timer)
-  // },[]);
 
   const fullScreenVariants = {
     fullScreen:{

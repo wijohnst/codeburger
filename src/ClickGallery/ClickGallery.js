@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { motion, AnimatePresence } from 'framer-motion'
 
-import FinalScene from '../Mobile/About/FinalScene'
-
 export default function ClickGallery(props) {
   
   const [sceneNumber, setSceneNumber] = useState(0);
@@ -35,7 +33,7 @@ export default function ClickGallery(props) {
   if(sceneNumber === 0){
     return (
       <AnimatePresence key={'First page'}>
-        <ContentWrapper>
+        <ContentWrapper key={'First Content'}>
           {scenes[sceneNumber]}
         <ForwardButton onClick={() => handlePageNav(true)}>Next</ForwardButton>
         </ContentWrapper>
@@ -44,9 +42,9 @@ export default function ClickGallery(props) {
   }else if(sceneNumber < scenes.length - 1){
    return(
       <AnimatePresence key={'Middle pages'}>
-        <ContentWrapper>
+        <ContentWrapper key={'Middle Content'}>
           {scenes[sceneNumber]}
-        </ContentWrapper>
+        </ContentWrapper >
         <NavWrapper>
           <BackButton onClick={() => handlePageNav(false)} >Back</BackButton>
           <ForwardButton onClick={() => handlePageNav(true)} >Next</ForwardButton>
@@ -56,7 +54,7 @@ export default function ClickGallery(props) {
  }else if(sceneNumber === scenes.length - 1){
    return(
      <AnimatePresence key={'Last page'}>
-       <ContentWrapper>
+       <ContentWrapper key={'Last Content'}>
           {scenes[sceneNumber]}
         </ContentWrapper>
         <NavWrapper>

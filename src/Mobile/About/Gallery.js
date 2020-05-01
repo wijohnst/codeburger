@@ -4,8 +4,16 @@ import { motion, useMotionValue } from 'framer-motion'
 
 import FinalScene from './FinalScene'
 
+const ViewArea = styled(motion.div)`
+`
+const ContentWrapper = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+`
 
-
+const SwipePromptWrapper = styled(motion.div)`
+  text-align: center;
+`
 
 export default function Gallery({scenes}) {
   
@@ -44,17 +52,6 @@ export default function Gallery({scenes}) {
     }
     
   }
-
-  const ViewArea = styled(motion.div)`
-  `
-  const ContentWrapper = styled(motion.div)`
-    display: flex;
-    flex-direction: column;
-  `
-
-  const SwipePromptWrapper = styled(motion.div)`
-    text-align: center;
-  `
 
   return (
     <React.Fragment>

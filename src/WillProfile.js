@@ -6,22 +6,22 @@ import AdvancePageButton from './AdvancePageButton'
 import ProfilePicture from './ProfilePicture'
 import WillHistory from './WillHistory'
 
+const ProfileWrapper = styled(motion.div)``
+  
+const ProfilePictureWrapper = styled(motion.div)`
+  opacity: 0;
+`
+const HistoryWrapper = styled(motion.div)`
+  opacity: 0;
+  width: 75%;
+  margin: 0 auto;
+`
+const ButtonWrapper = styled(motion.div)`
+  opacity: 0;
+`
+
 export default function WillProfile({advancePage}) {
   
-  const ProfileWrapper = styled(motion.div)`
-    /* background-color: lightpink; */
-  `
-  const ProfilePictureWrapper = styled(motion.div)`
-    opacity: 0;
-  `
-  const HistoryWrapper = styled(motion.div)`
-    opacity: 0;
-    width: 75%;
-    margin: 0 auto;
-  `
-  const ButtonWrapper = styled(motion.div)`
-    opacity: 0;
-  `
   return (
     <ProfileWrapper>
       Hi! I'm Chef Will. 

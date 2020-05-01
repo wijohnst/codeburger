@@ -12,6 +12,19 @@ import ScrollLogo from './ScrollLogo'
 
 import BurgerLogoSkewed from './burger_logo_skewed.png'
 
+const WindowWrapper = styled.div`
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+align-self: middle;
+background-image: url(${BurgerLogoSkewed});
+background-size: 60%;
+`
+const DisplayWrapper = styled(motion.div)`
+margin: 0 auto;
+`
+
 export default function ComponentRefactor() {
   
 const [clicked, setClicked] = useState(false);
@@ -39,18 +52,7 @@ const handleClick = () =>{
       }
     }
   }
-  const WindowWrapper = styled.div`
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-self: middle;
-    background-image: url(${BurgerLogoSkewed});
-    background-size: 60%;
-  `
-  const DisplayWrapper = styled(motion.div)`
-    margin: 0 auto;
-  `
+ 
   return (
     <Fragment>
       <ScrollLogo />

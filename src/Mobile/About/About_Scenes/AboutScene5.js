@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-// import CurriculumOverview from '../../CurriculumOverview'
-import FallingBlocks from '../../FallingBlocks'
+import FallingBlocks from '../../../FallingBlocks'
 
 const PageWrapper = styled.div`
   background-color: white;

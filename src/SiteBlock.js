@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function SiteBlock(props) {
   
-  const {color, text, shape, delay} = props; 
+  const {color, shape} = props; 
 
   let variants;
 

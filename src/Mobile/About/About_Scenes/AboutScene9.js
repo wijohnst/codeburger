@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-import MapPin from '../../MapPin'
-import DifficultyMeter from '../../DifficultyMeter'
+import MapPin from '../../../MapPin'
+import DifficultyMeter from '../../../DifficultyMeter'
 
 const PageWrapper = styled(motion.div)`
   background-color: lightgreen;

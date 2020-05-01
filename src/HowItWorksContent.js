@@ -1,12 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
 
 import Image from './Image'
 
 import TransitionChef from './transition_chef.png'
 import Entrepreneur from './entrepreneur.png'
-import BurgerLogo from './BurgerLogo'
 import AdvancePageButton from './AdvancePageButton'
 
 export default function HowItWorksContent({advancePage}) {
@@ -38,14 +36,8 @@ export default function HowItWorksContent({advancePage}) {
   const InfoListItem = styled.li`
     text-align: left;
   `
-  const CenterBurger = styled(motion.div)`
-    position: relative;
-    top: -70px;
-  `
-  const ContentWrapper2 = styled.div`
-    /* position: relative;
-    top: -90px; */
-  `
+  const ContentWrapper2 = styled.div``
+
   const CurriculumText = styled.h2`
     text-align: center;
     border-radius: 5px 5px 5px 5px;

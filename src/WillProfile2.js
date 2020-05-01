@@ -4,25 +4,27 @@ import { motion } from 'framer-motion'
 
 import ClosedSign from './ClosedSign'
 import AdvancePageButton from './AdvancePageButton'
+
+const ProfileWrapper = styled(motion.div)`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`
+const TextWrapper = styled(motion.div)`
+ opacity: 0;
+`
+const Text2Wrapper=styled(motion.div)`
+ opacity: 0;
+ max-width: 50%;
+ text-align: center;
+`
+const ButtonWrapper = styled(motion.div)`
+opacity: 0;
+`
+
 export default function WillProfile2({advancePage}) {
   
-  const ProfileWrapper = styled(motion.div)`
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-  `
-  const TextWrapper = styled(motion.div)`
-    opacity: 0;
-  `
-  const Text2Wrapper=styled(motion.div)`
-    opacity: 0;
-    max-width: 50%;
-    text-align: center;
-  `
-  const ButtonWrapper = styled(motion.div)`
-  opacity: 0;
-`
   return (
     <ProfileWrapper>
       <ClosedSign />

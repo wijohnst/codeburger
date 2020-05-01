@@ -10,6 +10,13 @@ import WillProfile2 from './WillProfile2'
 import HowItWorks from './HowItWorks'
 import CurriculumOverview from './CurriculumOverview'
 
+const AboutWrapper = styled.div`
+text-align: center;
+`
+const AboutReveal1 = styled(motion.div)`
+opacity: 0;
+`
+
 export default function About() {
 
   const [pageCount, setPageCount] = useState(0);
@@ -17,14 +24,6 @@ export default function About() {
   const advancePage = () =>{
     setPageCount(pageCount + 1);
   }
-  const AboutWrapper = styled.div`
-    text-align: center;
-  `
-
-  const AboutReveal1 = styled(motion.div)`
-    opacity: 0;
-  `
-  
   
   switch (pageCount) {
     case 0:

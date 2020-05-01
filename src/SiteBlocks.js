@@ -5,10 +5,10 @@ import { motion } from 'framer-motion'
 import SiteBlock from './SiteBlock'
 import SiteBlockContent from './SiteBlockContent'
 
+const BlocksWrapper = styled(motion.div)``
+
 export default function SiteBlocks() {
-  const BlocksWrapper = styled(motion.div)`
-   
-  `
+
   return (
     <BlocksWrapper>
       <SiteBlock color={'#23BC6A'} shadow={'full'} text={'HTML'} shape={'triangle'} delay={5} />

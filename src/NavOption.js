@@ -1,10 +1,21 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion} from 'framer-motion'
 
 import Label from './Label'
-import Heading from './Heading'
 import CloseSelected from './CloseSelected'
+
+const LabelWrapper = styled(motion.div)``
+
+const CloseIconWrapper = styled.div`
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+`
+const Content = styled(motion.div)`
+  opacity: 0;
+`
 
 export default function NavOption(props) {
 
@@ -60,26 +71,8 @@ export default function NavOption(props) {
     background-color: ${color};
     margin-top: 10px;
     padding-left: 10px;
-    /* height: 15%; */
   `
 
-  const LabelWrapper = styled(motion.div)``
-
-  const HeadingWrapper = styled.div`
-    /* background-color: lightgreen; */
-    display: inline-flex;
-    padding: 5px;
-  `
-  const CloseIconWrapper = styled.div`
-    /* background-color: lightpink; */
-    padding: 5px;
-    display: flex;
-    justify-content: flex-end;
-    align-self: flex-end;
-  `
-  const Content = styled(motion.div)`
-    opacity: 0;
-  `
   if(selected){
     return(
       <Wrapper

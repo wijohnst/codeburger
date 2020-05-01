@@ -1,20 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const RoadMapWrapper = styled.div`
+text-align: left;
+border: thin solid #23BC6A;
+border-radius: 5px 5px 5px 5px;
+`
+const Heading = styled.div`
+font-size: 3em;
+`
+const TextWrapper = styled.div`
+padding: 5px;
+`
+
 export default function RoadMapInfo() {
   
-  const RoadMapWrapper = styled.div`
-    text-align: left;
-    border: thin solid #23BC6A;
-    border-radius: 5px 5px 5px 5px;
-  `
-  const Heading = styled.div`
-    font-size: 3em;
-  `
-  const TextWrapper = styled.div`
-    padding: 5px;
-  `
-
   return (
     <RoadMapWrapper>
       <Heading>Course Road Map</Heading>

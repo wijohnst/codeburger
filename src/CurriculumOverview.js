@@ -8,16 +8,16 @@ import CurriculumOverviewScene3 from './CurriculumOverviewScene3'
 import CurriculumOverviewScene4 from './CurriculumOverviewScene4'
 import CurriculumOverviewScene5 from './CurriculumOverviewScene5'
 
+const CurriculumOverviewWrapper = styled(motion.div)`
+background-color: white;
+border-radius: 5px 5px 5px 5px;
+width: 75%;
+margin: 0 auto;
+`
+
 export default function CurriculumOverview({advancePage}) {
   
   const [sceneNumber, setSceneNumber] = useState(0);
-
-  const CurriculumOverviewWrapper = styled(motion.div)`
-    background-color: white;
-    border-radius: 5px 5px 5px 5px;
-    width: 75%;
-    margin: 0 auto;
-  `
 
   const dynamicContent = (sceneNumber) =>{
     switch (sceneNumber) {
@@ -56,7 +56,5 @@ export default function CurriculumOverview({advancePage}) {
     <CurriculumOverviewWrapper>
       {dynamicContent(sceneNumber)}
     </CurriculumOverviewWrapper>
-
- 
   )
 }

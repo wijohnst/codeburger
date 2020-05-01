@@ -10,55 +10,52 @@ import RoadMapInfo from './RoadMapInfo'
 import RoadMap from './RoadMap' 
 import AdvancePageButton from './AdvancePageButton' 
 
+const BackgroundWrapper = styled(motion.div)`
+display: grid;
+grid-template-columns: repeat(8 1fr);
+grid-template-rows: repeat(8 1fr);
+grid-template-areas:
+'p p p s s g g g'
+'p p p s s g g g'
+'p p p s s g g g'
+'c c c c c c c c'
+'c c c c c c c c'
+'c c c c c c c c'
+'. m m m m m m .'
+'. m m m m m m .';
+`
+
+const PWrapper = styled(motion.div)`
+opacity: 0;
+grid-area: p;
+`
+const CWrapper = styled(motion.div)`
+opacity: 0;
+grid-area: c;
+padding: 10px;
+`
+
+const SWrapper = styled(motion.div)`
+opacity: 0;
+grid-area: s;
+`
+
+const MWrapper = styled(motion.div)`
+opacity: 0;
+grid-area: m;
+`
+
+const GWrapper = styled(motion.div)`
+opacity: 0;
+grid-area: g;
+`
+
+const AdvancePageButtonWrapper = styled.div`
+text-align: center;
+padding: 10px;
+`
+
 export default function CurriculumOverviewScene5({advancePage}) {
-  
-  const BackgroundWrapper = styled(motion.div)`
-    display: grid;
-    grid-template-columns: repeat(8 1fr);
-    grid-template-rows: repeat(8 1fr);
-    grid-template-areas:
-    'p p p s s g g g'
-    'p p p s s g g g'
-    'p p p s s g g g'
-    'c c c c c c c c'
-    'c c c c c c c c'
-    'c c c c c c c c'
-    '. m m m m m m .'
-    '. m m m m m m .';
-  `
-
-  const PWrapper = styled(motion.div)`
-    opacity: 0;
-    /* background-color: lightpink; */
-    grid-area: p;
-  `
-  const CWrapper = styled(motion.div)`
-    opacity: 0;
-    /* background-color: lightgreen; */
-    grid-area: c;
-    padding: 10px;
-  `
-
-  const SWrapper = styled(motion.div)`
-    opacity: 0;
-    /* background-color: lightyellow; */
-    grid-area: s;
-  `
-
-  const MWrapper = styled(motion.div)`
-    opacity: 0;
-    grid-area: m;
-  `
-
-  const GWrapper = styled(motion.div)`
-    opacity: 0;
-    grid-area: g;
-  `
-
-  const AdvancePageButtonWrapper = styled.div`
-    text-align: center;
-    padding: 10px;
-  `
   
   return (
     <React.Fragment>

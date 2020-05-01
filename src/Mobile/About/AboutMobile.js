@@ -1,18 +1,18 @@
 import React from 'react'
 
-import ClickGallery from '../Scratch/ClickGallery/ClickGallery'
+import ClickGallery from '../../ClickGallery/ClickGallery'
 
-import Scene1 from './About_Scenes/Scene1'
-import Scene2 from './About_Scenes/Scene2'
-import Scene3 from './About_Scenes/Scene3'
-import Scene4 from './About_Scenes/Scene4'
-import Scene5 from './About_Scenes/Scene5'
-import Scene6 from './About_Scenes/Scene6'
-import Scene7 from './About_Scenes/Scene7'
-import Scene8 from './About_Scenes/Scene8'
-import Scene9 from './About_Scenes/Scene9'
-import Scene10 from './About_Scenes/Scene10'
-import Scene11 from './About_Scenes/Scene11'
+import Scene1 from './About_Scenes/AboutScene1'
+import Scene2 from './About_Scenes/AboutScene2'
+import Scene3 from './About_Scenes/AboutScene3'
+import Scene4 from './About_Scenes/AboutScene4'
+import Scene5 from './About_Scenes/AboutScene5'
+import Scene6 from './About_Scenes/AboutScene6'
+import Scene7 from './About_Scenes/AboutScene7'
+import Scene8 from './About_Scenes/AboutScene8'
+import Scene9 from './About_Scenes/AboutScene9'
+import Scene10 from './About_Scenes/AboutScene10'
+import Scene11 from './About_Scenes/AboutScene11'
 
 
 const variants={
