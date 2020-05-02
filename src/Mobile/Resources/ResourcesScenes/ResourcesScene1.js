@@ -28,7 +28,9 @@ const OptionsWrapper = styled.div`
   align-items: center;
 `
 
-export default function ResourcesScene1() {
+export default function ResourcesScene1(props) {
+  
+  const {handleClick} = props;
   return (
     <SceneWrapper>
       <HeadingWrapper>Looking for more information on a topic?</HeadingWrapper>
@@ -37,11 +39,22 @@ export default function ResourcesScene1() {
       </Image>
       <p>Select an area below for additional learning resources.</p>
       <OptionsWrapper>
-        <ResourceOption backgroundColor={'#23BC6A'} text={'HTML'} clipPath={'square'} />
-        <ResourceOption backgroundColor={'#FCEE21'} text={'CSS'} clipPath={'triangle'} />
-        <ResourceOption backgroundColor={'#BC2423'} text={'JavaScript'} clipPath={'circle'} />
+        <ResourceOption backgroundColor={'#23BC6A'} 
+                        text={'HTML'} 
+                        clipPath={'square'} 
+                        onClick={() => handleClick('HTML')} 
+                        />
+        <ResourceOption backgroundColor={'#FCEE21'} 
+                        text={'CSS'} 
+                        clipPath={'triangle'} 
+                        onClick={() => handleClick('CSS')} 
+                        />
+        <ResourceOption backgroundColor={'#BC2423'} 
+                        text={'JavaScript'} 
+                        clipPath={'circle'} 
+                        onClick={() => handleClick('JavaScript')} 
+                        />
       </OptionsWrapper>
-      
     </SceneWrapper>
   )
 }

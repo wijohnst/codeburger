@@ -16,7 +16,7 @@ align-items: center;
 padding: 2px;
 `
 
-export default function Scene2({variants}) {
+export default function AboutScene2({variants}) {
   
   return (
   <AnimatePresence>

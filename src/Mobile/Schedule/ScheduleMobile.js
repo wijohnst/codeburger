@@ -28,12 +28,10 @@ const variants={
 export default function ScheduleMobile({updateOpen}) {
 
   return (
-    <div>
       <ClickGallery scenes={[
                         <ScheduleScene1 variants={variants} />, 
                         <ScheduleScene2 variants={variants} />,
-                        <ScheduleScene3 variants={variants} />,
+                        <ScheduleScene3 variants={variants} />
                         ]} updateOpen={updateOpen} indexNumber={1}/>
-    </div>
   )
 }

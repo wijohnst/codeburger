@@ -8,7 +8,6 @@ import YouTubeLogo from './youtube_logo.png'
 
 const SceneWrapper= styled(motion.div)`
   background-color: #FFCECE;
-  width: 100%;
   box-shadow: 5px 5px 12px rgba(0,0,0,.7);
   display: flex;
   flex-direction: column;
@@ -17,9 +16,17 @@ const SceneWrapper= styled(motion.div)`
   padding: 2px;
 `
 
-export default function ScheduleScene2() {
+export default function ScheduleScene2({variants}) {
+
+  
   return (
-    <SceneWrapper>
+    <SceneWrapper
+    key="sceneWrapper"
+    variants={variants}
+    initial='pre'
+    animate={['pre', 'enter']}
+    exit='exit'
+    >
       <Image>
         <img src={TwitchLogo} alt={'Twitch.com'} />
       </Image>

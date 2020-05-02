@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
 import FallingBlocks from '../../../FallingBlocks'
@@ -14,6 +14,12 @@ const BlocksWrapper = styled.div`
   align-items: center;
 `
 export default function Scene5({variants}) {
+
+  useEffect(() => {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }, [])
+  
   return (
     <PageWrapper>
       <p>CodeBurger covers the 3 core technologies of modern web design: <b>HTML, CSS, and Javascript.</b></p>

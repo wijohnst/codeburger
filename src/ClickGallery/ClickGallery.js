@@ -17,7 +17,9 @@ export default function ClickGallery(props) {
   `
   const ForwardButton = styled.div`
     display: inline-block;
-    border: solid thin #707070; 
+    border: solid white;
+    font-weight: 400;
+    border-radius: 2px 2px 2px 2px; 
     padding: 5px;
     margin: 5px;
     font-size: 1.25em;
@@ -30,7 +32,9 @@ export default function ClickGallery(props) {
   `
   const BackButton = styled.div`
     display: inline-block;
-    border: solid thin #707070; 
+    border: solid white; 
+    font-weight: 400;
+    border-radius: 2px 2px 2px 2px; 
     padding: 5px;
     font-size: 1.25em;
     margin-top: 5px;

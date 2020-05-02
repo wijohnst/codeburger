@@ -23,13 +23,10 @@ export default function MobileLayout2() {
   const [isOpen, setIsOpen] = useState([true,false,false,false]);
 
   const updateOpen = (targetCard) =>{
-    console.log(`Target Card = ${targetCard + 1}`);
-
+   
     const openArray = [...isOpen];
 
     let currentState = openArray[targetCard];
-
-    console.log(!currentState);
 
     openArray[targetCard] = !currentState;
     
@@ -62,7 +59,8 @@ export default function MobileLayout2() {
                   <MobileCard2 
                     key={`MobileCard ${index}`} 
                     isOpen={element}
-                    color={sectionColors[index]}>
+                    color={sectionColors[index]}
+                    >
                       {sectionContent[index]}
                   </MobileCard2>
                 </React.Fragment>
@@ -71,6 +69,6 @@ export default function MobileLayout2() {
         )
       }
       </CardTabWrapper>
-      </AppViewWrapper>
+    </AppViewWrapper>
   )
 }
