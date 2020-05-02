@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { motion, AnimatePresence } from 'framer-motion'
 
+import { getPath, getColor } from '../Utils/utilities'
+
 export default function ClickGallery(props) {
   
   const [sceneNumber, setSceneNumber] = useState(0);
@@ -15,33 +17,36 @@ export default function ClickGallery(props) {
   const ContentWrapper = styled(motion.div)`
   text-align: center;
   `
+
+  const ButtonWrap = styled.div`
+    margin-top: 10px;
+    display: inline-block;
+    filter: drop-shadow(1px 6px 3px rgba(50, 50, 0, 0.5));
+    &:hover{
+      filter: drop-shadow(0px 0px 0px);
+    }
+  `
   const ForwardButton = styled.div`
     display: inline-block;
-    border: solid white;
-    font-weight: 400;
-    border-radius: 2px 2px 2px 2px; 
-    padding: 5px;
-    margin: 5px;
-    font-size: 1.25em;
+    margin: 2px;
+    clip-path: ${getPath('rightArrow')};
+    background-color: white;
+    width: 50px;
+    height: 25px;
     &:hover{
-      font-weight: 400;
-      color: white;
-      border-color: white;
+      background-color: ${getColor('grey')};
       cursor: pointer;
     }
   `
   const BackButton = styled.div`
     display: inline-block;
-    border: solid white; 
-    font-weight: 400;
-    border-radius: 2px 2px 2px 2px; 
-    padding: 5px;
-    font-size: 1.25em;
-    margin-top: 5px;
+    margin: 2px;
+    clip-path: ${getPath('leftArrow')};
+    background-color: white;
+    width: 50px;
+    height: 25px;
     &:hover{
-      font-weight: 400;
-      color: white;
-      border-color: white;
+      background-color: ${getColor('grey')};
       cursor: pointer;
     }
   `
@@ -53,7 +58,9 @@ export default function ClickGallery(props) {
       <AnimatePresence key={'First page'}>
         <ContentWrapper key={'First Content'}>
           {scenes[sceneNumber]}
-        <ForwardButton onClick={() => handlePageNav(true)}>Next</ForwardButton>
+          <ButtonWrap>
+            <ForwardButton onClick={() => handlePageNav(true)} />
+          </ButtonWrap>
         </ContentWrapper>
       </AnimatePresence>
     )
@@ -64,8 +71,12 @@ export default function ClickGallery(props) {
           {scenes[sceneNumber]}
         </ContentWrapper >
         <NavWrapper>
-          <BackButton onClick={() => handlePageNav(false)} >Back</BackButton>
-          <ForwardButton onClick={() => handlePageNav(true)} >Next</ForwardButton>
+          <ButtonWrap>
+            <BackButton onClick={() => handlePageNav(false)} />
+          </ButtonWrap>
+          <ButtonWrap>
+            <ForwardButton onClick={() => handlePageNav(true)} />
+          </ButtonWrap>
         </NavWrapper>
     </AnimatePresence>
    )
@@ -76,7 +87,9 @@ export default function ClickGallery(props) {
           {scenes[sceneNumber]}
         </ContentWrapper>
         <NavWrapper>
-          <ForwardButton onClick={() => updateOpen(indexNumber)} >Continue</ForwardButton>
+          <ButtonWrap>
+            <ForwardButton onClick={() => updateOpen(indexNumber)} />
+          </ButtonWrap>
         </NavWrapper>
      </AnimatePresence>
    )

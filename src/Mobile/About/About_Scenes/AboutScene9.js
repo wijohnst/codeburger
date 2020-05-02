@@ -28,7 +28,7 @@ export default function Scene9({variants}){
     >
      <MapPin color={'#FCEE21'} pinCenterColor={'white'} />
      <h4><u>CSS for Restaurants</u></h4>
-     <p>If HTML is the foundation of our house, CSS is the interior decoration. <b>CSS for Restaurants </b> 
+     <p>If HTML is the foundation of our house, CSS is the interior design. <b>CSS for Restaurants </b> 
       builds on what you learned in the first course through the introduction of <i>Cascading Style Sheets</i>. This
       course will answer the question "How do I make my website look great?"</p> 
    <DifficultyMeter status={[true,true,false]} color={'#FCEE21'}/>

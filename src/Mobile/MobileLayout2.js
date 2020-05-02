@@ -8,6 +8,7 @@ import MobileCardTab2 from './MobileCardTab2'
 import AboutMobile from './About/AboutMobile'
 import ScheduleMobile from './Schedule/ScheduleMobile'
 import ResourcesMobile from './Resources/ResourcesMobile'
+import JoinMobile from'./Join/JoinMobile'
 
 const CardTabWrapper = styled.div`
 position: relative;
@@ -34,7 +35,7 @@ export default function MobileLayout2() {
   }
 
   const sectionHeadings = ['About', 'Schedule', 'Resources', 'Join'];
-  const sectionContent = [<AboutMobile  updateOpen={updateOpen}/>,<ScheduleMobile updateOpen={updateOpen} />,<ResourcesMobile updateOpen={updateOpen} />,'']
+  const sectionContent = [<AboutMobile  updateOpen={updateOpen}/>,<ScheduleMobile updateOpen={updateOpen} />,<ResourcesMobile updateOpen={updateOpen} />,<JoinMobile updateOpen={updateOpen} />];
   const sectionColors=['#23BC6A','#BC2423','#FCEE21','#534741'];
   const secondaryColors =['white','#23BC6A','#BC2423','#FCEE21'];
 
