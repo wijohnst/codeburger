@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 import Image from '../../../Image'
 import PhoneHuman from './phone_human.png'
@@ -8,17 +8,17 @@ import ResourceOption from './ResourceOption'
 
 const SceneWrapper= styled(motion.div)`
   background-color: lightyellow;
-  box-shadow: 5px 5px 12px rgba(0,0,0,.7);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2px;
+  box-shadow: 5px 5px 12px rgba(0,0,0,.7);
+  text-align: center;
 `
-const HeadingWrapper = styled.div`
-  margin-top: 15px;
-  font-size: 1.5em;
-`
+// const HeadingWrapper = styled.p`
+//   /* margin-top: 15px; */
+//   font-size: 1.5em;
+// `
 
 const OptionsWrapper = styled.div`
   display: flex;
@@ -31,12 +31,13 @@ export default function ResourcesScene1(props) {
   
   const {handleClick} = props;
   return (
+    <AnimatePresence>
     <SceneWrapper>
-      <HeadingWrapper>Looking for more information on a topic?</HeadingWrapper>
+      <p>Looking for more information on a topic?</p>
       <Image>
         <img src={PhoneHuman} alt={'Man with phone'} />
       </Image>
-      <p>Select an area below for additional learning resources.</p>
+      <p>Select an optional below for additional resources.</p>
       <OptionsWrapper>
         <ResourceOption backgroundColor={'#23BC6A'} 
                         text={'HTML'} 
@@ -55,5 +56,6 @@ export default function ResourcesScene1(props) {
                         />
       </OptionsWrapper>
     </SceneWrapper>
+    </AnimatePresence>
   )
 }
