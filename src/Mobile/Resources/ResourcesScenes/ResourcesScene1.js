@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 
 import Image from '../../../Image'
 import PhoneHuman from './phone_human.png'
+import ResourceOption from './ResourceOption'
 
 const SceneWrapper= styled(motion.div)`
   background-color: lightyellow;
@@ -20,6 +21,13 @@ const HeadingWrapper = styled.div`
   font-size: 1.5em;
 `
 
+const OptionsWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`
+
 export default function ResourcesScene1() {
   return (
     <SceneWrapper>
@@ -28,6 +36,12 @@ export default function ResourcesScene1() {
         <img src={PhoneHuman} alt={'Man with phone'} />
       </Image>
       <p>Select an area below for additional learning resources.</p>
+      <OptionsWrapper>
+        <ResourceOption backgroundColor={'#23BC6A'} text={'HTML'} clipPath={'square'} />
+        <ResourceOption backgroundColor={'#FCEE21'} text={'CSS'} clipPath={'triangle'} />
+        <ResourceOption backgroundColor={'#BC2423'} text={'JavaScript'} clipPath={'circle'} />
+      </OptionsWrapper>
+      
     </SceneWrapper>
   )
 }

@@ -8,6 +8,10 @@ export default function MobileCardTab2(props) {
   const MobileCardTabWrapper = styled.div`
     background-color: ${secondaryColor};
     position: relative;
+    &:hover{
+      font-weight: 400;
+      cursor: pointer;
+    }
   `
   const Tab = styled.div`
     width: 40%;

@@ -20,12 +20,26 @@ export default function ClickGallery(props) {
     border: solid thin #707070; 
     padding: 5px;
     margin: 5px;
+    font-size: 1.25em;
+    &:hover{
+      font-weight: 400;
+      color: white;
+      border-color: white;
+      cursor: pointer;
+    }
   `
   const BackButton = styled.div`
     display: inline-block;
     border: solid thin #707070; 
     padding: 5px;
+    font-size: 1.25em;
     margin-top: 5px;
+    &:hover{
+      font-weight: 400;
+      color: white;
+      border-color: white;
+      cursor: pointer;
+    }
   `
   const NavWrapper = styled.div`
     text-align: center;

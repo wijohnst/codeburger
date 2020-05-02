@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-import ClickGallery from '../../ClickGallery/ClickGallery'
+
 
 import ResourcesScene1 from './ResourcesScenes/ResourcesScene1'
 
@@ -24,12 +24,12 @@ const variants={
 }
 
 export default function ScheduleMobile({updateOpen}) {
+  const [scene, setScene] = useState(0);
 
-  return (
-    <div>
-      <ClickGallery scenes={[
-                        <ResourcesScene1 variants={variants} />, 
-                        ]} updateOpen={updateOpen} indexNumber={1}/>
-    </div>
-  )
+  if(scene === 0){
+    return (
+      <ResourcesScene1 />
+    )
+  }
+  
 }
