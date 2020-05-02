@@ -14,6 +14,7 @@ const SceneWrapper= styled(motion.div)`
   justify-content: center;
   align-items: center;
   padding: 2px;
+  overflow: hidden;
 `
 export default function JoinScene1() {
   return (

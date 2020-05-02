@@ -14,6 +14,7 @@ const SceneWrapper= styled(motion.div)`
   align-items: center;
   box-shadow: 5px 5px 12px rgba(0,0,0,.7);
   text-align: center;
+  overflow: hidden;
 `
 // const HeadingWrapper = styled.p`
 //   /* margin-top: 15px; */
