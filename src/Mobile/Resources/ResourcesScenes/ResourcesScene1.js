@@ -8,7 +8,6 @@ import ResourceOption from './ResourceOption'
 
 const SceneWrapper= styled(motion.div)`
   background-color: lightyellow;
-  width: 100%;
   box-shadow: 5px 5px 12px rgba(0,0,0,.7);
   display: flex;
   flex-direction: column;
