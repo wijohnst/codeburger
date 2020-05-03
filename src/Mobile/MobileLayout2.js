@@ -21,7 +21,7 @@ margin: 0 auto;
 
 export default function MobileLayout2() {
   
-  const [isOpen, setIsOpen] = useState([false,false,false,true]);
+  const [isOpen, setIsOpen] = useState([true,false,false,false]);
 
   const updateOpen = (targetCard) =>{
    
