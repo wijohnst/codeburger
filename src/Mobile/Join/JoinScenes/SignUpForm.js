@@ -45,7 +45,7 @@ export default function SignUpForm() {
 
   if(!isSubmitted){
   return (
-      <SignUpFormWrapper onSubmit={handleSubmit} >
+      <SignUpFormWrapper onSubmit={handleSubmit}>
         <p>First name:</p>
         <input type='text' name='firstName' onChange={(e) => setFirstName(e.target.value)} />
         <p> Last name:</p>
