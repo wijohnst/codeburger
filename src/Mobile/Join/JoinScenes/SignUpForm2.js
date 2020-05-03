@@ -17,8 +17,7 @@ export default function SignUpForm2(props) {
             <option value={option}> {option }</option>
             )
           })}
-        </select><br />
-        <button type='submit'>Submit</button>
+        </select>
       </div>
     )
   }else{
@@ -26,7 +25,6 @@ export default function SignUpForm2(props) {
       <div>
         <p>What do you do?</p>
         <input type='text' name='employment_input'></input>
-        <button type='submit'>Submit</button>
       </div>
     )
   }

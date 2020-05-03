@@ -34,7 +34,8 @@ export default function SignUpForm() {
         <label> Yes </label>
       <input type='radio' name='is_service' id='is_service_false' value='false' onChange={() => handleSelect(false)}/>
         <label> No </label>
-      {isService === null ? <p /> : <SignUpForm2 isService={isService} form={'sign-up'}/>}
+      {isService === null ? <p /> : <SignUpForm2 isService={isService} form={'sign-up'}/>}<br />
+      <button type='submit'>Submit</button>
     </SignUpFormWrapper>
   )
 }
