@@ -19,26 +19,26 @@ export default function SignUpForm() {
   const[lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
 
-  const encode = (data) =>{
-    const formData = new FormData();
-    Object.keys(data).forEach((k) =>{
-      formData.append(k,data[k])
-    });
-    return formData;
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
   }
+
   const handleSubmit = e =>{
     console.log('Submitted...')
     setIsSubmitted(true);
 
-    const formData = {contactInfo : lastName, firstName, email};
+    const data = { "form-name": "contact", firstName, lastName, email};
 
     fetch('/', {
       method: 'POST',
-      body: encode(formData)
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode(data)
     })
     .then(()=> setIsSubmitted(true))
     .catch(error => console.log(error));
-    
+
     e.preventDefault();
   }
   
