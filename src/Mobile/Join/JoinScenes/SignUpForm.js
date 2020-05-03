@@ -29,7 +29,7 @@ export default function SignUpForm() {
     console.log('Submitted...')
     setIsSubmitted(true);
 
-    const data = { "sign-up": "contact", firstName, lastName, email};
+    const data = { "form-name": "sign-up", firstName, lastName, email};
 
     fetch('/', {
       method: 'POST',
