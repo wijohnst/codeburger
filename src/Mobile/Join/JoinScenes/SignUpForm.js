@@ -18,8 +18,8 @@ export default function SignUpForm() {
   const [firstName, setFirstName] = useState('');
   const[lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
-  const [isServiceIndustry, setIsServiceIndustry] = useState('');
-
+  const [career, setCareer] = useState('');
+ 
   const encode = (data) => {
     return Object.keys(data)
         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -28,12 +28,10 @@ export default function SignUpForm() {
 
   const handleSubmit = e =>{
     console.log('Submitted...')
-    const service = isService;
-    setIsServiceIndustry(service);
     setIsSubmitted(true);
 
-    const data = { "form-name": "sign-up", firstName, lastName, email, isServiceIndustry};
-
+    const data = { "form-name": "sign-up", firstName, lastName, email, isService, career};
+    console.log(data);
     fetch('/', {
       method: 'POST',
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -44,6 +42,7 @@ export default function SignUpForm() {
 
     e.preventDefault();
   }
+
   
 
   if(!isSubmitted){
@@ -56,11 +55,11 @@ export default function SignUpForm() {
         <p>Email:</p>
         <input type='email' name='email' onChange={(e) => setEmail(e.target.value)} />
         <p>Do you usually work in the service industry?</p>
-        <input type='radio' name='isService' onClick={() => setIsService(true)} />
+        <input type='radio' name='isService' onClick={() => setIsService(true)}/>
         <label>Yes</label>
-        <input type='radio' name='isService' onClick={() => setIsService(false)} />
+        <input type='radio' name='isService' onClick={() => setIsService(false)}/>
         <label>No</label>
-        {isService !== null ? <SignUpForm2 isService={isService} /> : <p>---</p> }
+        {isService !== null ? <SignUpForm2 isService={isService} setCareer={setCareer}/> : <p /> }
         <br />
         <button type="submit"> Join CodeBurger!</button>
       </SignUpFormWrapper>
