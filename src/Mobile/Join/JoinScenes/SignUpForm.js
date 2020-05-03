@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 
-// import SignUpForm2 from './SignUpForm2'
+import SignUpForm2 from './SignUpForm2'
 
 const SignUpFormWrapper = styled.form`
   background-color: white;
@@ -12,12 +12,13 @@ const SignUpFormWrapper = styled.form`
 `
 export default function SignUpForm() {
 
-  // const [isService, setIsService] = useState(null);
+  const [isService, setIsService] = useState(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const [firstName, setFirstName] = useState('');
   const[lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
+  const [isServiceIndustry, setIsServiceIndustry] = useState('');
 
   const encode = (data) => {
     return Object.keys(data)
@@ -27,9 +28,10 @@ export default function SignUpForm() {
 
   const handleSubmit = e =>{
     console.log('Submitted...')
+    setIsServiceIndustry(isService);
     setIsSubmitted(true);
 
-    const data = { "form-name": "sign-up", firstName, lastName, email};
+    const data = { "form-name": "sign-up", firstName, lastName, email, isServiceIndustry};
 
     fetch('/', {
       method: 'POST',
@@ -52,6 +54,13 @@ export default function SignUpForm() {
         <input type='text' name='lastName' onChange={(e) => setLastName(e.target.value)} />
         <p>Email:</p>
         <input type='email' name='email' onChange={(e) => setEmail(e.target.value)} />
+        <p>Do you usually work in the service industry?</p>
+        <input type='radio' name='isService' onClick={() => setIsService(true)} />
+        <label>Yes</label>
+        <input type='radio' name='isService' onClick={() => setIsService(false)} />
+        <label>No</label>
+        {isService !== null ? <SignUpForm2 isService={isService} /> : <p>---</p> }
+        <br />
         <button type="submit"> Join CodeBurger!</button>
       </SignUpFormWrapper>
     )

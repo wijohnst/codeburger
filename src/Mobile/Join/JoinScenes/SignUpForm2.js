@@ -14,7 +14,7 @@ export default function SignUpForm2(props) {
         <select form={form}>
           {options.map(option => {
             return(
-            <option value={option}> {option }</option>
+            <option key={option} value={option}> {option }</option>
             )
           })}
         </select>
