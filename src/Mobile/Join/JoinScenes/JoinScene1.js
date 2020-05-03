@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 
 import Image from '../../../Image'
 import ServingHuman from '../serving_human.png'
+import SignUpForm from './SignUpForm'
 
 const SceneWrapper= styled(motion.div)`
   background-color: #957F73;
@@ -15,6 +16,7 @@ const SceneWrapper= styled(motion.div)`
   align-items: center;
   padding: 2px;
   overflow: hidden;
+  text-align: center;
 `
 export default function JoinScene1() {
   return (
@@ -22,6 +24,8 @@ export default function JoinScene1() {
       <Image>
         <img src={ServingHuman} alt={'Human serving'} />
       </Image>
+      <p>Ready to join? Sign-up below to be added to our email service and never miss a CodeBurger update.</p>
+      <SignUpForm />
     </SceneWrapper>
   )
 }
