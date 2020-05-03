@@ -21,6 +21,12 @@ export default function SignUpForm() {
 
   if(!isSubmitted){
   return (
+    <React.Fragment>
+      <form name="sign-up" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="first_name" />
+      <input type="text" name="last_name" />
+      <input type="email" name="email" />
+      </form>
       <SignUpFormWrapper name='sign-up' method='POST'>
         <input type="hidden" name="sign-up" value="sign-up" />
         <p>
@@ -41,6 +47,7 @@ export default function SignUpForm() {
         {/* <button type='submit' onClick={() => setIsSubmitted(true)}>Submit</button> */}
         <button type='submit'>Submit</button>
       </SignUpFormWrapper>
+    </React.Fragment>
     )
   }
   else{
