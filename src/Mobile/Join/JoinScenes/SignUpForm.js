@@ -19,7 +19,9 @@ export default function SignUpForm() {
   }
 
   return (
+
     <SignUpFormWrapper name='sign-up' method='POST' data-netlify='true'>
+      <input type="hidden" name="form-name" value="sign-up" />
       <p>
         <label>First Name: <input type='text' name='first-name' /></label>
       </p>
@@ -27,7 +29,7 @@ export default function SignUpForm() {
         <label>Last Name: <input type='text' name='last-name' /></label>
       </p>
       <p>
-        <label>Email: <input type='text' name='email' /></label>
+        <label>Email: <input type='email' name='email' /></label>
       </p>
       <p> Do you typically work in the service industry?</p>
       <input type='radio' name='is_service' id='is_service_true' value='true' onChange={() => handleSelect(true)}/>
