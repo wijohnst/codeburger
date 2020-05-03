@@ -66,7 +66,11 @@ export default function SignUpForm() {
     )
   }else{
     return(
-      <p>Success!</p>
+      <div>
+        <p>Thank you for joining CodeBurger!</p>
+        <p> Check your email for updates on new classes, videos, and resources.</p>
+        <p>-Chef Will <span role='img' aria-label='Chef emoji'>👨‍🍳</span></p>
+      </div>
     )
   }
 
