@@ -19,8 +19,14 @@ export default function SignUpForm() {
   }
 
   return (
-
-    <SignUpFormWrapper name='sign-up' method='POST' data-netlify='true'>
+    <React.Fragment>
+      <form name="sign-up" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="first_name" />
+        <input type="text" name="last_name" />
+        <input type="email" name="email" />
+        <textarea name="message"></textarea>
+      </form>
+    <SignUpFormWrapper name='sign-up' method='POST'>
       <input type="hidden" name="form-name" value="sign-up" />
       <p>
         <label>First Name: <input type='text' name='first-name' /></label>
@@ -39,5 +45,6 @@ export default function SignUpForm() {
       {isService === null ? <p /> : <SignUpForm2 isService={isService} form={'sign-up'}/>}<br />
       <button type='submit'>Submit</button>
     </SignUpFormWrapper>
+    </React.Fragment>
   )
 }
