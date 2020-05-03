@@ -48,9 +48,7 @@ export default function ScheduleScene1(props) {
         animate={['pre', 'enter']}
         exit='exit'
         >
-        <Heading>
-          <p>Each CodeBurger lesson is available in 2 ways.</p>
-        </Heading>
+        <p>You've got two options for viewing each CodeBurger lesson.</p>
         <InfoWrapper>
           <NumberCircle color='#1D9D58' fontColor='black'>
             1

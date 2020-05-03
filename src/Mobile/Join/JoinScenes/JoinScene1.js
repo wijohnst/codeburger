@@ -12,7 +12,7 @@ const SceneWrapper= styled(motion.div)`
   box-shadow: 5px 5px 12px rgba(0,0,0,.7);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 2px;
   overflow: hidden;
@@ -21,10 +21,10 @@ const SceneWrapper= styled(motion.div)`
 export default function JoinScene1() {
   return (
     <SceneWrapper>
+      <p>Ready to join? Sign-up below to be added to our email service and never miss a CodeBurger update.</p>
       <Image>
         <img src={ServingHuman} alt={'Human serving'} />
       </Image>
-      <p>Ready to join? Sign-up below to be added to our email service and never miss a CodeBurger update.</p>
       <SignUpForm />
     </SceneWrapper>
   )

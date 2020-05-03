@@ -10,7 +10,7 @@ const SceneWrapper= styled(motion.div)`
   background-color: lightyellow;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   box-shadow: 5px 5px 12px rgba(0,0,0,.7);
   text-align: center;

@@ -50,6 +50,20 @@ export default function ClickGallery(props) {
       cursor: pointer;
     }
   `
+  const ContinueButton = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    clip-path: ${getPath('circle')};
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    &:hover{
+      background-color: ${getColor('grey')};
+      cursor: pointer;
+    }
+  `
   const NavWrapper = styled.div`
     text-align: center;
   `
@@ -88,7 +102,7 @@ export default function ClickGallery(props) {
         </ContentWrapper>
         <NavWrapper>
           <ButtonWrap>
-            <ForwardButton onClick={() => updateOpen(indexNumber)} />
+            <ContinueButton onClick={() => updateOpen(indexNumber)}>X</ContinueButton>
           </ButtonWrap>
         </NavWrapper>
      </AnimatePresence>
