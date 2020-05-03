@@ -8,7 +8,7 @@ export default function SignUpForm2(props) {
 
   if(isService){
     return (
-      <div>
+      <form name="sign-up">
         <p>I'm a...</p>
         <select form={form} onChange={(e) => setCareer(e.target.value)}>
           {options.map(option => {
@@ -17,14 +17,14 @@ export default function SignUpForm2(props) {
             )
           })}
         </select>
-      </div>
+      </form>
     )
   }else{
     return(
-      <div>
+      <form name="sign-up">
         <p>What do you do?</p>
         <input type='text' name='employment_input' onChange={(e) => setCareer(e.target.value)}></input>
-      </div>
+      </form>
     )
   }
     
