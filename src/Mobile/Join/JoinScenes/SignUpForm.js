@@ -28,7 +28,8 @@ export default function SignUpForm() {
 
   const handleSubmit = e =>{
     console.log('Submitted...')
-    setIsServiceIndustry(isService);
+    const service = isService;
+    setIsServiceIndustry(service);
     setIsSubmitted(true);
 
     const data = { "form-name": "sign-up", firstName, lastName, email, isServiceIndustry};
