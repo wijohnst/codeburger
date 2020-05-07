@@ -7,7 +7,7 @@ display: flex;
 flex-direction: column;
 padding: 10px;
 `
-export default function MobileCard2(props) {
+export default function MobileCard(props) {
   
   const { isOpen, color } = props;
 
