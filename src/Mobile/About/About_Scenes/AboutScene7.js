@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-import MapGuy from '../../../map_guy.png'
+import MapGuy from './map_guy.png'
 import Image from '../../../Image'
 
 const PageWrapper = styled(motion.div)`

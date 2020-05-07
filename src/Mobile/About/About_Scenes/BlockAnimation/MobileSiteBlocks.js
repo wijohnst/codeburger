@@ -4,10 +4,10 @@ import { motion } from 'framer-motion'
 
 import MobileSiteBlock from './MobileSiteBlock'
 
+const BlocksWrapper = styled(motion.div)``
+
 export default function MobileSiteBlocks({advanceScene}) {
-  const BlocksWrapper = styled(motion.div)`
-    /* background-color: lightgreen; */
-  `
+  
   return (
     <BlocksWrapper>
       <MobileSiteBlock color={'#23BC6A'} shadow={'full'} text={'HTML'} shape={'triangle'} delay={5} />

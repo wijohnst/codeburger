@@ -1,22 +1,21 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-import MobileCard2 from './About/MobileCard2'
+import MobileCard from './About/MobileCard'
 import ScrollLogo from '../ScrollLogo'
-import MobileCardTab2 from './MobileCardTab2'
+import MobileCardTab from './MobileCardTab'
 
 import AboutMobile from './About/AboutMobile'
-import ScheduleMobile from './Schedule/ScheduleMobile'
+import ScheduleMobile from './Schedule/ScheduleMobile'  
 import ResourcesMobile from './Resources/ResourcesMobile'
 import JoinMobile from'./Join/JoinMobile'
 
 const CardTabWrapper = styled.div`
 `
 const AppViewWrapper = styled.div`
-max-width: 500px;
+max-width: 500px;  
 margin: 0 auto;
 `
-
 export default function MobileLayout2() {
   
   const [isOpen, setIsOpen] = useState([true,true,true,true]);
@@ -48,20 +47,20 @@ export default function MobileLayout2() {
                     key={`button ${index}`} 
                     onClick={() => updateOpen(index)}
                   >
-                    <MobileCardTab2 
+                    <MobileCardTab 
                     color={sectionColors[index]}
                     secondaryColor={secondaryColors[index]}
                     >
                       {sectionHeadings[index]}
-                    </MobileCardTab2>
+                    </MobileCardTab>
                   </div>
-                  <MobileCard2 
+                  <MobileCard 
                     key={`MobileCard ${index}`} 
                     isOpen={element}
                     color={sectionColors[index]}
                     >
                       {sectionContent[index]}
-                  </MobileCard2>
+                  </MobileCard>
                 </React.Fragment>
             )
           }

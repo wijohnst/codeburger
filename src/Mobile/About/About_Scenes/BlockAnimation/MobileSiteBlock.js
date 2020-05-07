@@ -3,19 +3,23 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { getPath } from '../../../../Utils/utilities'
 
-export default function MobileSiteBlock(props) {
-  
-  const {color, text, shape, advanceScene} = props; 
-
-  let variants;
-
-  const ShadowFilter = styled.div`
+const TextWrapper = styled.div`
+    position: relative;
+    top: 45%;
+  `
+ const ShadowFilter = styled.div`
     filter: drop-shadow((5px 5px 12px #707070));
   `
   const BlockWrapper = styled(motion.div)`
     height: 150px;
     text-align: center;
-  `
+  `  
+
+export default function MobileSiteBlock(props) {
+  
+  const {color, text, shape, advanceScene} = props; 
+
+  let variants;
 
   switch (shape) {
   case 'triangle':
@@ -30,7 +34,8 @@ export default function MobileSiteBlock(props) {
           color: `${color}`,
           y: 150,
           zIndex: -1,
-          opacity: 0
+          opacity: 0,
+          // clipPath: getPath('square')
         }
       }
       break;
@@ -69,10 +74,6 @@ export default function MobileSiteBlock(props) {
         break;
   }
 
-  const TextWrapper = styled.div`
-    position: relative;
-    top: 45%;
-  `
   return (
     <React.Fragment>
     <ShadowFilter>

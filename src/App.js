@@ -1,8 +1,5 @@
 import React from 'react'
-
-
-import DesktopLayout from './DesktopLayout'
-import MobileLayout2 from './Mobile/MobileLayout2'
+import MobileLayout from './Mobile/MobileLayout'
 
 
 export default function App() {
@@ -17,13 +14,9 @@ export default function App() {
       
       
     )
-  }else if(testControl === 'desktop'){
-    return(
-      <DesktopLayout />
-    )
   }else if(testControl === 'mobile'){
      return( 
-      <MobileLayout2 />
+      <MobileLayout />
      )
   }
 }

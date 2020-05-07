@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion, AnimatePresence } from 'framer-motion'
 
-import ClosedSign from '../../../ClosedSign'
+import ClosedSign from './ClosedSign'
 
 const PageWrapper = styled(motion.div)`
     display: flex;
