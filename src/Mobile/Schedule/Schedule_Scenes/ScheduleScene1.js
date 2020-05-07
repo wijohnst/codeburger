@@ -54,7 +54,7 @@ export default function ScheduleScene1(props) {
             1
           </NumberCircle>
           <BodyTextWrapper>
-            <BodyTextHeader>Follow Along Live</BodyTextHeader>
+            <BodyTextHeader><a href="https://www.twitch.tv/codeburgerlive">Follow Along Live</a></BodyTextHeader>
             <BodyText>Each lesson is recorded live and streamed on Twitch.</BodyText>
           </BodyTextWrapper>
         </InfoWrapper>
