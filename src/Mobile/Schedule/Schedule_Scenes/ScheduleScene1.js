@@ -15,11 +15,6 @@ const SceneWrapper= styled(motion.div)`
   padding: 2px;
   margin-bottom: 10px;
 `
-
-const Heading = styled(motion.div)`
-  font-size: 1.5em;
-  font-weight: 300;
-`
 const InfoWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
@@ -36,7 +31,6 @@ const BodyTextHeader = styled(motion.a)`
 `
 const BodyText = styled(motion.div)`
 `
-
 
 export default function ScheduleScene1(props) {
   

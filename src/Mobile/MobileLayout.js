@@ -16,7 +16,7 @@ const AppViewWrapper = styled.div`
 max-width: 500px;  
 margin: 0 auto;
 `
-export default function MobileLayout2() {
+export default function MobileLayout() {
   
   const [isOpen, setIsOpen] = useState([true,true,true,true]);
 
