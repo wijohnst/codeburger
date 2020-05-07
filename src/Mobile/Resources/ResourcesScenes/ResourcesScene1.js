@@ -38,7 +38,7 @@ export default function ResourcesScene1(props) {
       <Image>
         <img src={PhoneHuman} alt={'Man with phone'} />
       </Image>
-      <p>Select an optional below for additional resources.</p>
+      <p>Select an option below for additional resources.</p>
       <OptionsWrapper>
         <ResourceOption backgroundColor={'#23BC6A'} 
                         text={'HTML'} 
