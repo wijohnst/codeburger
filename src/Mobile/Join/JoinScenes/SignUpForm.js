@@ -5,10 +5,12 @@ import SignUpForm2 from './SignUpForm2'
 
 const SignUpFormWrapper = styled.form`
   background-color: white;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   padding: 5px;
   box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
   margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 `
 
 const RadioInput = styled.input`
