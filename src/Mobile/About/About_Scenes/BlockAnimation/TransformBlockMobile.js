@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import { getPath } from '../../../../Utils/utilities'
 
 export default function TransformBlock(props) {
   
@@ -41,7 +42,7 @@ export default function TransformBlock(props) {
          
         },
         end:{
-          clipPath: 'none'
+          clipPath: getPath(shape)
         }
       }
       break;
@@ -51,7 +52,7 @@ export default function TransformBlock(props) {
             
           },
           end:{
-            clipPath: 'none'
+            clipPath: getPath(shape)
           }
         }
         break;
@@ -61,7 +62,7 @@ export default function TransformBlock(props) {
               
             },
             end:{
-              clipPath: 'none'
+              clipPath: getPath(shape)
             }
           }
           break;

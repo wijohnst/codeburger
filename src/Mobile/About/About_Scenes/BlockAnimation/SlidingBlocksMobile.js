@@ -10,8 +10,8 @@ export default function SlidingBlocksMobile({advanceScene}) {
   `
   return (
     <BlocksWrapper>
-      <TransformBlockMobile color={'#23BC6A'} shadow={'full'} text={'HTML'} shape={'square'} delay={5} advanceScene={advanceScene}/>
-      <TransformBlockMobile color={'#BC2423'} shadow={'half'} text={'CSS'} shape={'square'}  delay={4}/>
+      <TransformBlockMobile color={'#23BC6A'} shadow={'full'} text={'HTML'} shape={'triangle'} delay={5} advanceScene={advanceScene}/>
+      <TransformBlockMobile color={'#BC2423'} shadow={'half'} text={'CSS'} shape={'circle'}  delay={4}/>
       <TransformBlockMobile color={'#FCEE21'} shadow={'half'} text={'JavaScript'}  shape={'square'} delay={3} />
     </BlocksWrapper>
   )

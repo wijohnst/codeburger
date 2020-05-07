@@ -21,3 +21,13 @@ button{
   line-height: 1.15;
   margin: 0;
 }
+
+input{
+  border: 0;
+  width: 75%;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  padding: 7px 0;
+  margin: 10px;
+}
+

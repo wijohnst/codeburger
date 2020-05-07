@@ -36,12 +36,7 @@ export default function Scene6({variants}) {
     }else if(sceneNumber === 1){
       return(
         <PageWrapper>
-          <motion.p
-            // initial={{opacity: 1}}
-            // animate={{opacity: 0}}
-            // transition={{duration: 1, ease: 'easeOut'}}
-          >
-            When combined, these technologies create a website.</motion.p>
+          <motion.p>When combined, these technologies create a website.</motion.p>
           <BlocksWrapper>
             <MobileSiteBlocks advanceScene={advanceScene}/>
           </BlocksWrapper>

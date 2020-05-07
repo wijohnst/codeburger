@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import { getPath } from '../../../../Utils/utilities'
 
 export default function MobileSiteBlock(props) {
   
@@ -23,6 +24,7 @@ export default function MobileSiteBlock(props) {
           width: '150px',
           backgroundColor: `${color}`,
           borderRadius: '5px 5px 5px 5px',
+          clipPath: getPath('triangle')
         },
         end:{
           color: `${color}`,
@@ -37,7 +39,8 @@ export default function MobileSiteBlock(props) {
         start:{
           width: '150px',
           backgroundColor: `${color}`,
-          borderRadius: '5px 5px 5px 5px'
+          borderRadius: '5px 5px 5px 5px',
+          clipPath: getPath('square')
         },
         end:{
           color: '#707070',
@@ -54,6 +57,7 @@ export default function MobileSiteBlock(props) {
           width: '150px',
           borderRadius: '5px 5px 5px 5px',
           backgroundColor: `${color}`,
+          clipPath: getPath('circle')
         },
         end:{
           color: `${color}`,
@@ -76,7 +80,7 @@ export default function MobileSiteBlock(props) {
           variants={variants}
           initial={'start'}
           animate={['start','end']}
-          transition={{delay: 1, duration: 2, ease:'easeInOut'}}
+          transition={{duration: 2, ease:'easeInOut'}}
           onAnimationComplete={advanceScene}
         >
           <TextWrapper>

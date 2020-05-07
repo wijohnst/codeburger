@@ -10,6 +10,21 @@ const SignUpFormWrapper = styled.form`
   box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
   margin-bottom: 10px;
 `
+
+const RadioInput = styled.input`
+  max-width: 25%;
+`
+const RadioLabelGroup = styled.div`
+  /* background-color: lightyellow; */
+  margin: 5px;
+`
+
+const RadioGroup = styled.div`
+  /* background-color: lightpink; */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+`
 export default function SignUpForm() {
 
   const [isService, setIsService] = useState(null);
@@ -43,22 +58,24 @@ export default function SignUpForm() {
     e.preventDefault();
   }
 
-  
-
   if(!isSubmitted){
   return (
       <SignUpFormWrapper onSubmit={handleSubmit}>
-        <p>First name:</p>
-        <input type='text' name='firstName' onChange={(e) => setFirstName(e.target.value)} />
-        <p> Last name:</p>
-        <input type='text' name='lastName' onChange={(e) => setLastName(e.target.value)} />
-        <p>Email:</p>
-        <input type='email' name='email' onChange={(e) => setEmail(e.target.value)} />
+        <p>Join the CodeBurger mailing list.</p>
+        <input type='text' name='firstName' placeholder='First Name' onChange={(e) => setFirstName(e.target.value)} required/>
+        <input type='text' name='lastName' placeholder='Last Name' onChange={(e) => setLastName(e.target.value)} required/>
+        <input type='email' name='email' placeholder='Email' onChange={(e) => setEmail(e.target.value)} required/>
         <p>Do you usually work in the service industry?</p>
-        <input type='radio' name='isService' onClick={() => setIsService(true)}/>
-        <label>Yes</label>
-        <input type='radio' name='isService' onClick={() => setIsService(false)}/>
-        <label>No</label>
+        <RadioGroup>
+          <RadioLabelGroup>
+            <label>Yes</label>
+            <RadioInput type='radio' name='isService' onClick={() => setIsService(true)}/>
+          </RadioLabelGroup>
+          <RadioLabelGroup>
+            <label>No</label>
+            <RadioInput type='radio' name='isService' onClick={() => setIsService(false)} placeholder='No'/>
+          </RadioLabelGroup>
+        </RadioGroup>
         {isService !== null ? <SignUpForm2 isService={isService} setCareer={setCareer}/> : <p /> }
         <br />
         <button type="submit"> Join CodeBurger!</button>

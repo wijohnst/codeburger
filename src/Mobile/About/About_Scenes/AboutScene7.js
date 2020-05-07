@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
@@ -22,6 +22,12 @@ const Heading = styled.div`
 `
 
 export default function Scene7({variants}){
+
+  useEffect(() => {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }, [])
+
   return (
     <PageWrapper
       variants={variants}

@@ -4,6 +4,7 @@ import React from 'react'
 import DesktopLayout from './DesktopLayout'
 import MobileLayout2 from './Mobile/MobileLayout2'
 import ResourceOption from './Mobile/Resources/ResourcesScenes/ResourceOption'
+import AboutScene6 from './Mobile/About/About_Scenes/BlockAnimation/MobileSiteIllustration'
 
 export default function App() {
   
@@ -12,9 +13,7 @@ export default function App() {
   if(testControl === 'test'){
     return (
       <div>
-        <ResourceOption backgroundColor={'lightpink'} text={'HTML'} shape={'triangle'} />
-        <ResourceOption backgroundColor={'lightgreen'} text={'CSS'} shape={'circle'} />
-        <ResourceOption backgroundColor={'pink'} text={'JavaScript'} shape={'square'} />
+        <AboutScene6 />
       </div>
       
       

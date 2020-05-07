@@ -18,6 +18,7 @@ export default function MobileCardTab2(props) {
     width: 40%;
     padding: 2px;
     background-color: ${color};
+    color: ${secondaryColor};
     text-align: center;
     border-radius: 2px 2px 0px 0px;
     font-size: 1.5em;
