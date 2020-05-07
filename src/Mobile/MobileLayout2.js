@@ -11,8 +11,6 @@ import ResourcesMobile from './Resources/ResourcesMobile'
 import JoinMobile from'./Join/JoinMobile'
 
 const CardTabWrapper = styled.div`
-position: relative;
-top: 80px;
 `
 const AppViewWrapper = styled.div`
 max-width: 500px;
