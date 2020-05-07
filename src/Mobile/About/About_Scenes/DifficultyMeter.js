@@ -24,9 +24,6 @@ export default function DifficultyMeter(props) {
           <DifficultySquare active={isActive} color={color} key={index}/>
           )
         }))}
-        {/* <DifficultySquare active={true} color={'#1D9D58'}/>
-        <DifficultySquare active={false} color={'red'}/>
-        <DifficultySquare active={false} color={'red'}/> */}
       </DifficultySquaresWrapper>
     </DifficultyMeterWrapper>
   )

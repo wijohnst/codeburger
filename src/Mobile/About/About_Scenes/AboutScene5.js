@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
-import FallingBlocks from '../../../FallingBlocks'
+import FallingBlocks from './FallingBlocks'
 
 const PageWrapper = styled.div`
   background-color: white;

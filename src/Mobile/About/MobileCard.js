@@ -2,6 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
+const MobileCardWrapper = styled(motion.div)`
+display: flex;
+flex-direction: column;
+padding: 10px;
+`
 export default function MobileCard2(props) {
   
   const { isOpen, color } = props;
@@ -17,15 +22,9 @@ export default function MobileCard2(props) {
     }
   }
   
-  const MobileCardWrapper = styled(motion.div)`
-    display: flex;
-    flex-direction: column;
-    background-color: ${color};
-    padding: 10px;
-  `
-
   return (
     <MobileCardWrapper
+      style={{backgroundColor: color}}
       variants={variants}
       initial={'closed'}
       animate={isOpen ? 'open' : 'closed'}

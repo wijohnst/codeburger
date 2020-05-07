@@ -4,17 +4,17 @@ import { motion } from 'framer-motion'
 
 import MobileSiteIllustration from './MobileSiteIllustration'
 
-export default function SingleMorphBlock({shape, color}) {
-  
-
-  let variants;
-  
-  const BlockWrapper = styled(motion.div)`
+const BlockWrapper = styled(motion.div)`
     margin: 0 auto;
     border-radius: 5px 5px 5px 5px;
     padding: 5px;
     margin-bottom: 10px;
   `
+
+export default function SingleMorphBlock({shape, color}) {
+  
+  let variants;
+  
   switch (shape) {
   case 'triangle':
       variants={

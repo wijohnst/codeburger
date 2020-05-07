@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion, AnimatePresence } from 'framer-motion'
 
-import ProfilePicture from '../../../ProfilePicture'
-import WillHistory from '../../../WillHistory'
+import ProfilePicture from './ProfilePicture'
+import WillHistory from './WillHistory'
 
 const SceneWrapper= styled(motion.div)`
 background-color: lightgreen;

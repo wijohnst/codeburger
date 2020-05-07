@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 
 import Image from '../../../Image'
-import RoadMapHuman from '../../../roadmap_human.png'
+import RoadMapHuman from './roadmap_human.png'
 
 const PageWrapper = styled(motion.div)`
   background-color: lightgreen;

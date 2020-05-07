@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { motion, AnimatePresence } from 'framer-motion'
 
 import Image from '../../../Image'
-import AboutImage from '../../../about_image.png'
+import AboutImage from './about_image.png'
 
 const SceneWrapper= styled(motion.div)`
 background-color: lightgreen;

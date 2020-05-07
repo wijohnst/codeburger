@@ -4,10 +4,11 @@ import { motion } from 'framer-motion'
 
 import TransformBlockMobile from './TransformBlockMobile'
 
-export default function SlidingBlocksMobile({advanceScene}) {
-  const BlocksWrapper = styled(motion.div)`
+const BlocksWrapper = styled(motion.div)`
     /* background-color: lightgreen; */
   `
+export default function SlidingBlocksMobile({advanceScene}) {
+  
   return (
     <BlocksWrapper>
       <TransformBlockMobile color={'#23BC6A'} shadow={'full'} text={'HTML'} shape={'triangle'} delay={5} advanceScene={advanceScene}/>
