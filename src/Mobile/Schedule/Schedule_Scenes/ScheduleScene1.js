@@ -22,6 +22,7 @@ const Heading = styled(motion.div)`
 `
 const InfoWrapper = styled(motion.div)`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `
@@ -29,11 +30,13 @@ const BodyTextWrapper = styled(motion.div)`
   padding: 5px;
   max-width: 70%;
 `
-const BodyTextHeader = styled(motion.p)`
+const BodyTextHeader = styled(motion.a)`
   font-size: 1.25em;
+  color: inherit;
 `
 const BodyText = styled(motion.div)`
 `
+
 
 export default function ScheduleScene1(props) {
   
@@ -54,16 +57,14 @@ export default function ScheduleScene1(props) {
             1
           </NumberCircle>
           <BodyTextWrapper>
-            <BodyTextHeader><a href="https://www.twitch.tv/codeburgerlive">Follow Along Live</a></BodyTextHeader>
+            <BodyTextHeader href="https://www.twitch.tv/codeburgerlive" target="_blank">Follow Along Live</BodyTextHeader>
             <BodyText>Each lesson is recorded live and streamed on Twitch.</BodyText>
           </BodyTextWrapper>
-        </InfoWrapper>
-        <InfoWrapper>
           <NumberCircle color='#FCEE21' fontColor='black'>
           2
           </NumberCircle>
           <BodyTextWrapper>
-            <BodyTextHeader>Watch on YouTube</BodyTextHeader>
+            <BodyTextHeader href="https://www.youtube.com/channel/UCKjKzz1G_crevuSdi9UEt7w?view_as=subscriber" target="_blank">Watch on YouTube</BodyTextHeader>
             <BodyText>Watch an edited version of each live stream on your own time.</BodyText>
           </BodyTextWrapper>
         </InfoWrapper>

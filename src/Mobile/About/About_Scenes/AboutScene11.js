@@ -36,7 +36,7 @@ export default function Scene11({variants}){
       <Image>
         <img src={RoadMapHuman} alt={'Human with a question.'} />
       </Image>
-      <p>So that's CodeBurger in a nutshell. When you're ready, click the close button below then click on the <b>Schedule</b> tab to learn how to begin.</p>
+      <p>So that's CodeBurger in a nutshell. Check out the <b>Schedule</b> tab to see when and where you can start learning with CodeBurger.</p>
   </PageWrapper>
   )
 }
