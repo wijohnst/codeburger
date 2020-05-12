@@ -27,11 +27,11 @@ export default function AboutScene1(props) {
       animate={['pre', 'enter']}
       exit='exit'
       >
-       <p>Technical Skill Training for Restaurant People.</p>
+       <p>Web design skills.</p>
        <Image>
          <img src={AboutImage} alt={'Chef with Technology'} />
        </Image>
-       <p>Taught by a restaurant person.</p>
+       <p>For the Service Industry.</p>
       </SceneWrapper>
     </AnimatePresence>
   )
