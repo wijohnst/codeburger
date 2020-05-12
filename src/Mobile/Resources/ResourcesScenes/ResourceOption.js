@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+
 import { getPath } from '../../../Utils/utilities'
 
 const OptionWrapper = styled.div`
@@ -13,6 +14,7 @@ const OptionWrapper = styled.div`
   clip-path: ${props => props.clipPath};
   &:hover{
     box-shadow: 5px 5px 12px #707070;
+    cursor: pointer;
   }
   margin: 5px;
 `
@@ -24,11 +26,11 @@ const TextWrapper = styled.div`
 `
 export default function ResourceOption(props) {
 
-  const {backgroundColor, text, shape} = props;
+  const {backgroundColor, text, shape, handleClick} = props;
   const clip = getPath(shape);
 
   return (
-    <OptionWrapper backgroundColor={backgroundColor} clipPath={clip}>
+    <OptionWrapper backgroundColor={backgroundColor} clipPath={clip} onClick={() => handleClick(text)}>
       <TextWrapper shape={shape}>
         <p><b>{text}</b></p>
       </TextWrapper>
