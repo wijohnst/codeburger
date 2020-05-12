@@ -43,17 +43,17 @@ export default function ResourcesScene1(props) {
         <ResourceOption backgroundColor={'#23BC6A'} 
                         text={'HTML'} 
                         clipPath={'square'} 
-                        onClick={() => handleClick('HTML')} 
+                        handleClick={handleClick} 
                         />
         <ResourceOption backgroundColor={'#FCEE21'} 
                         text={'CSS'} 
                         clipPath={'triangle'} 
-                        onClick={() => handleClick('CSS')} 
+                        handleClick={handleClick} 
                         />
         <ResourceOption backgroundColor={'#BC2423'} 
                         text={'JavaScript'} 
                         clipPath={'circle'} 
-                        onClick={() => handleClick('JavaScript')} 
+                        handleClick={handleClick}  
                         />
       </OptionsWrapper>
     </SceneWrapper>

@@ -18,7 +18,7 @@ const PageWrapper = styled(motion.div)`
     position: relative;
     top: -60px;
     margin: 0 auto;
-    height: 75vh;
+    height: 50vh;
     overflow: hidden;
   `
 

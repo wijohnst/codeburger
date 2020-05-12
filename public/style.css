@@ -42,3 +42,12 @@ input{
   margin: 10px;
 }
 
+.close-icon{
+  
+  
+}
+
+.close-icon:hover{
+  cursor: pointer;
+  box-shadow: none;
+}
