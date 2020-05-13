@@ -41,6 +41,22 @@ else if(category === 'lessonLinks'){
             link: 'https://codepen.io/Chef_Will/pen/WNQXJoE',
             description: 'HTML Menu',
             type: 'Codepen'
+          },
+          {
+          link: 'https://youtu.be/MM2QkFNDhC4',
+          description: 'Lesson 1 - Intro to HTML',
+          type: 'YouTube'
+          }
+        ] 
+      },
+      {
+        lessonNumber : 2,
+        lessonDate : '05/13/2020',
+        codeLinks : [
+          {
+            link: 'https://codepen.io/Chef_Will/pen/MWaBPrp',
+            description: 'HTML Recipe Template',
+            type: 'Codepen'
           }
         ] 
       }
