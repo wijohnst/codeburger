@@ -57,6 +57,11 @@ else if(category === 'lessonLinks'){
             link: 'https://codepen.io/Chef_Will/pen/MWaBPrp',
             description: 'HTML Recipe Template',
             type: 'Codepen'
+          },
+          {
+            link: 'https://youtu.be/M_K83dl6e2E',
+            description: `Lesson 2 - Let's Code a Recipe`,
+            type: 'YouTube'
           }
         ] 
       }
